@@ -1,0 +1,397 @@
+<html>
+    <head>
+        {% if historical %}
+        <title>{{historical['key']}} | Alledaags Geloven</title>
+        <meta name="description" content="{{historical['name']}} | Alledaags Geloven | Dashboard voor dagelijks gebed, studie of bezinning">
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="{{historical_social_data['name']}}">
+        <meta itemprop="description" content="{{historical_social_data['title']}}">
+        <meta itemprop="image" content="{{historical_social_data['image']}}">
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@vicmortelmans">
+        <meta name="twitter:title" content="{{historical_social_data['name']}}">
+        <meta name="twitter:description" content="{{historical_social_data['title']}}">
+        <meta name="twitter:creator" content="@vicmortelmans">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src" content="{{historical_social_data['image']}}">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="{{historical_social_data['name']}}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://alledaags.gelovenleren.net/link/{{historical}}" />
+        <meta property="og:image" content="{{historical_social_data['image']}}" />
+        <meta property="og:description" content="{{historical_social_data['title']}}" />
+        <meta property="og:site_name" content="Alledaags Geloven" />
+        <meta property="article:published_time" content="2015-04-10T05:59:00+01:00" />
+        <meta property="article:modified_time" content="2015-04-10T19:08:47+01:00" />
+        <meta property="article:section" content="Publications" />
+        <meta property="article:tag" content="katholiek" />
+        <meta property="fb:admins" content="100003216449243" />
+        {% else %}
+        <title>Alledaags Geloven</title>
+        <meta name="description" content="{% if historical %}{{historical['key'] + ' | '}}{% endif %}Dashboard voor dagelijks gebed, studie of bezinning">
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Alledags Geloven">
+        <meta itemprop="description" content="Dashboard voor dagelijks gebed, studie of bezinning">
+        <meta itemprop="image" content="https://alledaags.gelovenleren.net/var/alledaags-geloven.png">
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@vicmortelmans">
+        <meta name="twitter:title" content="Alledaags Geloven">
+        <meta name="twitter:description" content="Dashboard voor dagelijks gebed, studie of bezinning">
+        <meta name="twitter:creator" content="@vicmortelmans">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src" content="https://alledaags.gelovenleren.net/var/alledaags-geloven.png">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Alledaags Geloven" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://alledaags.gelovenleren.net/" />
+        <meta property="og:image" content="https://alledaags.gelovenleren.net/var/alledaags-geloven.png" />
+        <meta property="og:description" content="Dashboard voor dagelijks gebed, studie of bezinning" />
+        <meta property="og:site_name" content="Alledaags Geloven" />
+        <meta property="article:published_time" content="2015-04-10T05:59:00+01:00" />
+        <meta property="article:modified_time" content="2015-04-10T19:08:47+01:00" />
+        <meta property="article:section" content="Publications" />
+        <meta property="article:tag" content="katholiek" />
+        <meta property="fb:admins" content="100003216449243" />
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,latin-ext">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <style type="text/css">
+            body {
+            background-image: url(/var/pink-and-white.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            font: 14pt "Roboto", sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            }
+            a {
+            text-decoration: inherit;
+            color: inherit;
+            cursor: pointer;
+            cursor: hand;
+            }
+            #body {
+            padding: 8px;
+            }
+            header {
+            background-color: #D32F2F;
+            margin: auto;
+            }
+            footer {
+            background-color: #607D8B;
+            color: white;
+            padding: 16px 0 16px 0;
+            }
+            footer div {
+            margin: 16px;
+            }
+            h1 /* headline */  {
+            max-width: 1000px;
+            margin: 0;
+            font-size: 24pt;
+            font-weight: normal;
+            color: white;
+            opacity: 0.87;
+            line-height: 32px;
+            padding: 19px 16px 19px 16px;
+            }
+            #container {
+            max-width: 1000px;
+            margin: auto;
+            }
+            .item {
+            margin-bottom: 8px;
+            }
+            .oldNews {
+            display: none;
+            }
+            .card {
+            display: inline-block;
+            background: white;
+            width: 304px;  /* = 320 (phone width) - 16 (2 x gutter) */
+            box-shadow: 0px 3px 6px 0px #777;
+            border-radius: 2px;
+            }
+            .thumbnail {
+            max-height: 480px;
+            background-position: 0 0;
+            background-size: cover;
+            }
+            .padded-image {
+            padding: 26px 16px 0 16px;
+            text-align: center;
+            }
+            .left-image {
+            padding: 0;
+            text-align: left;
+            }
+            .filled-image {
+            padding: 0;
+            text-align: center;
+            }
+            .filled-image img {
+            width: 100%;
+            }
+            .title /* "title"*/ {
+            font-size: 20pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 24px;
+            padding: 23px 16px 23px 16px;
+            }
+            .subtitle /* "body 2" */ {
+            font-size: 14pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 18px;
+            padding: 0 16px 26px 16px;
+            }
+            .getijdenreeks .subtitle {
+            padding: 0 0 26px 0;
+            }
+            .text /* "body 2" */ {
+            font-size: 14pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 18px;
+            padding: 0 16px 26px 16px;
+            }
+            .caption /* "caption" */ {
+            font-size: 12pt;
+            font-weight: normal;
+            opacity: 0.54;
+            line-height: 16px;
+            padding: 0 16px 26px 16px;
+            }
+            .bible .title, .bible .subtitle, a.bible {
+            color: #009688; /* teal */
+            }
+            .bible .action-button {
+            background-color: #009688;
+            }
+            .catechism .title, .catechism .subtitle, a.catechism {
+            color: #FF5722; /* deep orange */
+            }
+            .catechism .action-button {
+            background-color: #FF5722;
+            }
+            .lectionary .title, .lectionary .subtitle, a.lectionary {
+            color: #E91E63; /* pink */
+            }
+            .lectionary .action-button {
+            background-color: #E91E63;
+            }
+            .saints .title, .saints .subtitle, a.saints {
+            color: #9C27B0; /* purple */
+            }
+            .saints .action-button {
+            background-color: #9C27B0;
+            }
+            .prayer .title, .prayer .subtitle, a.prayer {
+            color: #4CAF50; /* green */
+            }
+            .prayer .action-button {
+            background-color: #4CAF50;
+            }
+            .contemplation .title, .contemplation .subtitle, a.contemplation {
+            color: #2196F3; /* blue */
+            }
+            .contemplation .action-button {
+            background-color: #2196F3;
+            }
+            .actions {
+            border-top: 1pt solid #e0e0e0;
+            position: relative;  /* for .action-button positioning */
+            }
+            .action-button {
+                position: absolute;
+                top: -28px;
+                right: 16px;
+                width: 56px;
+                height: 56px;
+                border-radius: 28px;
+                z-index: 10;
+                background-image: url(/var/dove1.png);
+                background-position: 50% 50%;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+            .header-button {
+                float: right;
+                width: 70px;
+                height: 70px;
+                z-index: 10;
+                position: relative; /* for z-index to work */
+                background-image: url(/var/dove1.png);
+                background-position: 50% 50%;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+            .play-button {
+                background-image: url(/var/play-gray.png);
+                background-repeat: no-repeat;
+                background-position: 10px 22px;
+                padding-left: 40px !important;
+            }
+            .pause-button {
+                background-image: url(/var/pause-gray.png);
+                background-repeat: no-repeat;
+                background-position: 10px 22px;
+                padding-left: 40px !important;
+            }
+            .loading-button {
+                background-image: url(/var/loading-gray.gif);
+                background-repeat: no-repeat;
+                background-position: 10px 22px;
+                padding-left: 40px !important;
+            }
+            .status {
+                display: none;
+            }
+            .button {
+            font-size: 14pt;
+            font-weight: medium;
+            opacity: 0.87;
+            line-height: 18px;
+            padding: 26px 16px 26px 16px;
+            }
+            .icon {
+            display: inline-block;
+            line-height: 24px;
+            padding: 14px 8px 10px 16px;
+            }
+            div.getijdenreeks {
+            padding: 16px 16px 16px
+            }
+            span.getijde {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            width: 42px;
+            line-height: 24px;
+            padding: 6px 0 6px 0;
+            margin-right: 8px;
+            }
+            .red span.getijde {
+            background-color: #F44336;
+            }
+            .white span.getijde {
+            background-color: #FFF9C4;
+            color: #212121;
+            }
+            .green span.getijde {
+            background-color: #4CAF50;
+            }
+            .purple span.getijde {
+            background-color: #9C27B0;
+            }
+            span.getijde.leeg {
+            background-color: white;
+            }
+        </style>
+        <script src="/var/jquery.min.js"></script>
+        <script src="/var/masonry.pkgd.js"></script>
+        <script src="/var/imagesloaded.pkgd.min.js"></script>
+        {{ radio_script|safe }}
+    </head>
+    <body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TS4MLC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TS4MLC');</script>
+<!-- End Google Tag Manager -->
+        <header>
+            <div class="header-button" id="random"></div>
+            <script>
+                $('#random').on('click',function() {
+                    var visibleCards = $('.item:visible:not(.sticky)');
+                    var count = visibleCards.length;
+                    var random = Math.floor(Math.random() * (count));
+                    var randomCard = visibleCards.eq(random);
+                    visibleCards.hide();
+                    randomCard.show();
+                    $('#showOldNewsTitle').show();
+                    $('#container').masonry();
+                    window.scrollTo(0,0);
+                });
+            </script>
+            <h1>Alledaags Geloven</h1>
+        </header>
+        <div id="body">
+            <div id="container">
+                {% if not historical %}
+                <div class="item sticky">
+                    <div class="card" id="selectColor">
+                        <div class="title" id="showOldNewsTitle">
+                            <a id="showOldNews">Toon alle kaarten</a>
+                            <script>
+                                // didn't fit in koningsoord.py
+                                $('#item-koningsoord').addClass('oldNews')
+                                // didn't fit in radiomariavlaanderen.py
+                                $('#item-radiomariavlaanderen').addClass('oldNews')
+                                // start of actual code that belongs here
+                                if (! $('.oldNews').length) {
+                                    $('#showOldNewsTitle').hide();
+                                }
+                                $('#showOldNews').on('click',function(){
+                                    $('.item').show();
+                                    $('#showOldNewsTitle').hide();
+                                    $('#container').masonry();
+                                });
+                            </script>
+                        </div>
+                        <div class="actions">
+                            <a class="lectionary">
+                                <div class="button">Lectionarium</div>
+                            </a>
+                            <a class="bible">
+                                <div class="button">Heilige Schrift</div>
+                            </a>
+                            <a class="catechism">
+                                <div class="button">Catechismus</div>
+                            </a>
+                            <a class="saints">
+                                <div class="button">Martyrologium</div>
+                            </a>
+                            <a class="prayer">
+                                <div class="button">Gebed</div>
+                            </a>
+                            <a class="contemplation">
+                                <div class="button">Contemplatie</div>
+                            </a>
+                            <a class="mp3">
+                                <div class="button">🔊&nbsp; Luisterkaarten</div>
+                            </a>
+                            <a class="video">
+                                <div class="button">▶ &nbsp; Kijkkaarten</div>
+                            </a>
+                        </div>
+                        <script>
+                            $('#selectColor div div').on('click',function() {
+                                var selectedType = $(this).parent().attr('class');
+                                $('.item').show();
+                                $('.item').each(function(){
+                                    if (!$(this).children().first().hasClass(selectedType)) {
+                                        $(this).hide();
+                                    }
+                                });
+                                $('#selectColor').parent().show();
+                                $('#showOldNewsTitle').show();
+                                $('#container').masonry();
+                                window.scrollTo(0,0);
+                            });
+                        </script>
+                    </div>
+                </div>
+                {% endif %}

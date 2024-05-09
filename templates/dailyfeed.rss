@@ -1,0 +1,22 @@
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+    <channel>
+        <title>Alledaags Geloven</title>
+        <atom:link href="https://alledaags.gelovenleren.net/dailyfeed.xml" rel="self" type="application/rss+xml" />
+        <link>https://alledaags.gelovenleren.net</link>
+        <description>Dashboard voor dagelijks gebed, studie of bezinning</description>
+        <pubDate>{{pubDate}}</pubDate>
+        <language>nl</language>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <item>
+            <title>{{title}}</title>
+            <link>{{url}}</link>
+            <guid isPermaLink="true">{{url}}</guid>
+            <description>{{description}}</description>
+            <enclosure url="{{image}}" length="5000" type="image/png" />
+        </item>
+    </channel>
+</rss>

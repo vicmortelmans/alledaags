@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body {
+            font: 14pt "Roboto", sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+        }
+        body > header {
+            background-color: #D32F2F;
+            margin: auto;
+        }
+        #body {
+            padding: 8px;
+        }
+        body > footer {
+            background-color: #607D8B;
+            color: white;
+            padding: 16px 0 16px 0;
+        }
+        body > footer div {
+            margin: 16px;
+        }
+        body > header > h1 /* headline */  {
+            max-width: 1000px;
+            margin: 0;
+            font-size: 24pt;
+            font-weight: normal;
+            color: white;
+            opacity: 0.87;
+            line-height: 32px;
+            padding: 19px 16px 19px 16px;
+        }
+        body > header p {
+            max-width: 1000px;
+            margin: 0;
+            font-size: 14pt;
+            color: white;
+            opacity: 0.87;
+            padding: 6px 16px 16px 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        #container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        section > header > h1 /* "title"*/ {
+            font-size: 20pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 24px;
+            padding: 23px 16px 23px 16px;
+        }
+        section > header p /* "body 2" */ {
+            font-size: 14pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 18px;
+            padding: 0 16px 26px 16px;
+        }
+        section p /* "body 2" */ {
+            font-size: 14pt;
+            font-weight: normal;
+            opacity: 0.87;
+            line-height: 18px;
+            padding: 0 16px 26px 16px;
+        }
+    </style>
+</head>
+<body>
+    {% if title or subtitle %}
+    <header>
+        {% if title %}
+        <h1>{{title}}</h1>
+        {% endif %}
+        {% if subtitle %}
+        <p>{{subtitle}}</p>
+        {% endif %}
+    </header>
+    {% endif %}
+    <div id="body">
+        <div id="container">
+            {% for reading in readings %}
+            <section>
+                <header>
+                    {% if reading["title"] != 'bibleref' %}
+                    <h1>{{reading["title"]}}</h1>
+                    {% endif %}
+                    <p>{{reading["subtitle"].capitalize()}}</p>
+                </header>
+                <p>{{reading["text"]}}</p>
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+        {% if source %}
+        <div>{{source}}</div>
+        {% endif %}
+        {% if copyright %}
+        <div>{{copyright}}</div>
+        {% endif %}
+    </footer>
+</body>
+</html>

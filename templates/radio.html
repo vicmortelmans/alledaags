@@ -1,0 +1,149 @@
+                <script>
+                    var audio = {};
+                    var TIMEOUT = 20000;
+                    var RETRY = 20000;
+                    function playRadio(key, mp3, live, site) {
+                        var button = '#play-' + key;
+                        var status = '#status-' + key;
+                        audio[key] = document.createElement('audio');
+                        audio[key].live = live;
+                        audio[key].updateStatus = function(event) {
+                            switch(event) {
+                                case 'init':
+                                    if (site == "radio") {
+                                        $(button).hide();
+                                    }
+                                    $(status).text("Zender zoeken...");
+                                    $(button + 'div').addClass('loading-button').removeClass('pause-button play-button');
+                                    // small random delay of < 2 sec to spread audio requests
+                                    setTimeout(function(){
+                                        audio[key].src = mp3;
+                                        audio[key].preload = 'metadata';
+                                    }, Math.floor(Math.random * 2000));
+                                    setTimeout(function(){
+                                        audio[key].updateStatus('timeout');
+                                    }, TIMEOUT);
+                                    break;
+                                case 'canplay':
+                                    if ($(status).text() == "Zender zoeken..." ||
+                                        $(status).text() == "Geen verbinding...") {
+                                        $(button + ' div').addClass('play-button').removeClass('loading-button pause-button');
+                                        if (site == "radio") {
+                                            $(button).show();
+                                        }
+                                        $(status).text("Online");
+                                        if (audio[key].live)
+                                            audio[key].src = '';
+                                    }
+                                    break;
+                                case 'play':
+                                    if (audio[key].live || !audio[key].src)  // don't know how, but src can become undefined
+                                        audio[key].src = mp3;
+                                    audio[key].play();
+                                    $(button + ' div').addClass('loading-button').removeClass('pause-button play-button');
+                                    $(status).text("Even geduld...");
+                                    // retry after 60 seconds, if after 15 seconds if no connection is made
+                                    setTimeout(function() {
+                                        audio[key].updateStatus('timeout');
+                                    }, TIMEOUT)
+                                    // stop other stations that might be playing
+                                    for (var otherKey in audio) {
+                                        if (otherKey != key) {
+                                            var otherStatus = '#status-' + otherKey;
+                                            var otherStatusText = $(otherStatus).text();
+                                            if (otherStatusText == "Luister!" ||
+                                                    otherStatusText == "Even geduld..." ) {
+                                                var otherButton = '#play-' + otherKey;
+                                                audio[otherKey].pause();
+                                                if (audio[otherKey].live)
+                                                    audio[otherKey].src = '';
+                                                $(otherButton + ' div').addClass('play-button').removeClass('loading-button pause-button');
+                                                $(otherStatus).text("Online");
+                                            }
+                                        }
+                                    }
+                                    break;
+                                case 'playing':
+                                    $(button + ' div').addClass('pause-button').removeClass('loading-button play-button');
+                                    $(status).text("Luister!");
+                                    break;
+                                case 'stop':
+                                    audio[key].pause();
+                                    if (audio[key].live)
+                                        audio[key].src = '';
+                                    $(button + ' div').addClass('play-button').removeClass('loading-button pause-button');
+                                    $(status).text("Online");
+                                    break;
+                                case 'timeout':
+                                    // timeout trying to connect
+                                    if ($(status).text() == "Zender zoeken..." ||
+                                        $(status).text() == "Even geduld..." ||
+                                        $(status).text() == "Geen verbinding...") {
+                                        $(status).text("Geen verbinding");
+                                        audio[key].src = '';
+                                        if (site == "radio") {
+                                            $(button).hide();
+                                        }
+                                        setTimeout(function(){
+                                            audio[key].updateStatus('retry');
+                                        }, RETRY)
+                                    }
+                                    break;
+                                case 'retry':
+                                    // retry
+                                    if ($(status).text() == "Geen verbinding") {
+                                        $(status).text("Geen verbinding...");
+                                        audio[key].src = mp3;
+                                        audio[key].preload = 'metadata';
+                                        setTimeout(function(){
+                                            audio[key].updateStatus('timeout');
+                                        }, TIMEOUT);
+                                    }
+                                    break;
+                            }
+                        };
+                        // station is ready!
+                        audio[key].addEventListener('loadedmetadata', function () { // firefox doesn't send canplay event
+                            audio[key].updateStatus('canplay');
+                        }, true);
+                        // station has started playing
+                        audio[key].addEventListener('playing', function () {
+                            audio[key].updateStatus('playing');
+                        }, true);
+                        $(button).on('click', function () {
+                            // click PLAY
+                            if (audio[key].paused) {
+                                audio[key].updateStatus('play');
+                            // click STOP
+                            } else {
+                                audio[key].updateStatus('stop');
+                            }
+                        });
+                        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                            audio[key].updateStatus('canplay'); // mobile browsers refuse to probe audio if not initiated by user action
+                        } else {
+                            audio[key].updateStatus('init');
+                        }
+                        return audio[key];
+                        //@ sourceURL=playRadio.js
+                    }
+                    function load_card(key) {
+                        // fetch html with random content for card 'key' and display it
+                        // this could be a jQuery one-liner, but $.load with extra selector after url won't run js
+                        if (key in audio) {
+                            audio[key].updateStatus('stop');
+                        }
+                        $.get('/random/' + key,function(html) {
+                            var $html = $(html.trim()); // trim removes leading newlines, which are not accepted by jquery when parsing html
+                            $('#' + key).empty();
+                            $html.find('.card').appendTo('#' + key);
+                            $html.find('script').appendTo('#' + key);
+                            $('#' + key).imagesLoaded(function() {
+                                $('#container').masonry();
+                            });
+                        }, 'html');
+                    }
+                </script>
+                {% for radio in radios_list %}
+                    {{ radio.html(cookies)|safe }}
+                {% endfor %}

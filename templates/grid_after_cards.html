@@ -1,0 +1,85 @@
+                <div class="item sticky">
+                    <div class="card">
+                        <div class="title">Alledaags Geloven</div>
+                        <div class="text">Dashboard voor dagelijks gebed, studie of bezinning</div>
+                        <div class="caption">Alledaags Geloven is geen website die eigen content levert. De toegevoegde waarde
+                            van Alledaags Geloven zit hem in de verbetering van jouw workflow. De luttele
+                            minuten die je dagelijks kan of wil vrijmaken voor gebed moeten efficiënt besteed
+                            worden. Als je elke dag meer tijd verspilt om je gebedsmateriaal bijeen te zoeken
+                            dan dat je tijd kan besteden aan je eigenlijke gebed, ben je verkeerd bezig, dus
+                            dat doet Alledaags Geloven voor jou! Je hebt maar je tablet te pakken, de pagina
+                            te openen en met een enkele klik bereik je al je gebeden, bijbelteksten, catechese
+                            en bezinningen, opengeslagen op de pagina van vandaag, of waar je laatst gebleven
+                            was.</div>
+                        <div class="caption">Privacybeleid: er worden geen persoonlijke gegevens opgeslagen. Deze site gebruikt YouTube API-services. Gebruikers zijn onderworpen aan de <a href="https://www.youtube.com/t/terms" target="_blank" style="text-decoration: underline;">gebruiksvoorwaarden van YouTube</a> en het <a href="https://policies.google.com/privacy?hl=nl" target="_blank" style="text-decoration: underline;">privacybeleid van Google</a>.</div>
+                    </div>
+                </div>
+                <div class="item sticky" id="share">
+                    <div class="card">
+                        <div class="title">Verspreiden!</div>
+                        <div class="text">Vind je Alledaags Geloven nuttig? Deel de site!</div>
+                        <div class="actions">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://alledaags.gelovenleren.net">
+                                <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            </a>
+                            <a target="_blank" href="https://twitter.com/home?status=%22jouw%20dashboard%20voor%20dagelijks%20gebed%2C%20studie%20of%20bezinning%22%20https://alledaags.gelovenleren.net">
+                                <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            </a>
+                            <a target="_blank" href="https://plus.google.com/share?url=https://alledaags.gelovenleren.net">
+                                <div class="icon"><img src="/var/google-plus-box.png"/></div>
+                            </a>
+                        </div>
+                        <div class="actions">&nbsp;</div>
+                        <div class="text">Heb je feedback? Stuur een berichtje!</div>
+                        <div class="actions">
+                            <a target="_blank" href="mailto:info@gelovenleren.net">
+                                <div class="icon"><img src="/var/email.png"/></div>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/alledaagsgeloven">
+                                <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% if not historical %}
+                <script>
+                    var share = $('#share');
+                    var itemcount = $('.item').length;
+                    var random_position = Math.floor(Math.random() * (itemcount - 4) + 3);
+                    share.insertAfter(share.siblings(':eq(' + random_position + ')'));
+                    $('#container').masonry();
+                </script>
+                {% else %}
+                <div class="item">
+                    <div class="card">
+                        <div class="title">
+                            <a href="/">Toon alle kaarten</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <footer>
+            <div><a href="mailto:info@gelovenleren.net">MAIL</a></div>
+            <div><a href="https://gelovenleren.net/blog/alledaags-geloven/">INFO</a></div>
+            <div><a href="https://www.facebook.com/alledaagsgeloven">FACEBOOK</a></div>
+            <div><a href="https://play.google.com/store/apps/details?id=net.gelovenleren.alledaags">GOOGLE PLAY STORE</a></div>
+            <div><a class="link" href="https://www.facebook.com/sharer/sharer.php?u=https://alledaags.gelovenleren.net">delen op FACEBOOK</a></div>
+            <div><a class="link" href="https://twitter.com/home?status=%22jouw%20dashboard%20voor%20dagelijks%20gebed%2C%20studie%20of%20bezinning%22%20https://alledaags.gelovenleren.net">delen op TWITTER</a></div>
+            <div><a class="link" href="https://plus.google.com/share?url=https://alledaags.gelovenleren.net">delen op GOOGLE+</a></div>
+        </footer>
+        <script>
+            var $container = $('#container');
+            $container.masonry({
+                columnWidth: 304,
+                itemSelector: '.item',
+                gutter: 8
+            });
+            $container.imagesLoaded(function(){
+                $container.masonry();
+            });
+        </script>
+    </body>
+</html>
+
