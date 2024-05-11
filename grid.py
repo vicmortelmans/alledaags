@@ -44,7 +44,7 @@ def gridHandler(request, historical):
     for card in cards.cards_list:
         content_card = card.html(request.cookies, historical)
         # html() method is in source.py and calls pick() method calling my_encrypt()
-        # which does insert of historical object to db
+        # which does insert of historical object to the database
         response += content_card
     # spit out the part of the webpage AFTER the cards
     template_after_cards = jinja_environment.get_template('grid_after_cards.html')
@@ -53,7 +53,7 @@ def gridHandler(request, historical):
     )
     response += content_after_cards
     logging.debug("Storing card historical data to datastore: start")
-    commit()  # here the hash key's and json contents of the cards are stored to the datastore
+    commit()  # here the hash keys and json contents of the cards are stored to the database
     logging.debug("Storing card historical data to datastore: stop")
     flask_response = Response(response)
     return flask_response

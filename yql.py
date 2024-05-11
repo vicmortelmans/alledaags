@@ -1,3 +1,4 @@
+import API_keys
 from bible import get_bible_text, test_bible
 from bibleref import parse_reference
 from collection.data import getHtml, getText, getJSON
@@ -40,7 +41,7 @@ def yqlPlaylistLatestHandler(request):
     # e.g.: https://catecheserooster.appspot.com/playlist-latest?id=PLsTqv8iy6f_2gSqDwxZfRt98N9-idZEBq
     id = urllib.parse.unquote(request.args.get('id'))
     callback = request.args.get('callback')
-    site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=" + id + "&maxResults=25&part=snippet%2CcontentDetails&key=AIzaSyBClmJxCBMvWS1lyrrPAdruiefymwnb-04"
+    site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=" + id + "&maxResults=25&part=snippet%2CcontentDetails&key=" + API_keys.YOUTUBE
     harvest = getJSON(site)
     try:
         items = [

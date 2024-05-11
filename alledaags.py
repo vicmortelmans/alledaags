@@ -1,6 +1,10 @@
 from flask import request
 from flask_init import app
 import grid
+import image
+import lectionarium
+import radio
+import randomizer
 import sync
 import yql
 
@@ -28,6 +32,11 @@ def image_image(key):
 def randomizer_random(key):
     return randomizer.randomHandler(request,key)
 
+@app.rout("/dailyfeed.rss")
+def randomizer_dailyFeed():
+    return randomizer.dailyFeedHandler(request)
+
+@app.route("/randomcard")
 @app.route("/randomcard/<category>")
 def randomizer_randomCard(category):
     return randomizer.randomCardHandler(request,category)

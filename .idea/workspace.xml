@@ -2,38 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66b0397-26e8-41d2-903a-81c203926b62" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/alledaags.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bible.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/cards.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/dailyfeed.rss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bible_configuration/editions.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flask_init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grid.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/grid_after_cards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/grid_before_cards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/grid_card.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jinja_templates.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/lectionarium.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mariadb_repo_setup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_encrypting.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/radio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/radio.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reset_database.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bible_configuration/services.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/source.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sync.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/abc_thomas.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/adoration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/adventskalender.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/andypenne.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/atotz.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/avondwoordjes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/avondwoordjes2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/barroux_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/beeldmeditatie.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/biddenonderweg.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/biddenonderweg_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/bijbeljaar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/bloemlezing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/bots.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/compendium.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/corona.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dagelijksbijbelcitaat2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dagelijksevangelie.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dagelijkseverbinding.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dagelijksgebed.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dominicanenpreek.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/dominicanenradio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/eerherstel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/eerstecommunie.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/ewtn.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/ewtn_mutsaerts.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/gebeden.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/gebedenboek.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/gedichten.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/getijden.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/geudens.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/goudenboek.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/gregoriaans_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/hagen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/hanssmits.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/heiligen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/hemelstraat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/holyhome.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/huissen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/ignatiaansbidden.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/innerlijkleven.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/jozefmaria.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/kapucijnen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/katholiekleven.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/katholieklevenpodcast.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/kenteringen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/kerkvaders.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/kinderwoorddienst.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/koningsoord.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/koningsoord_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/kwartetten.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lectionarium.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/lectionarium.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/leesrooster2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/levenmetignatius.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/lezingenvandedag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/lichtopmijnpad.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/livemass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/lourdes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/luistertnaarhem.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/marytown.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/mechelsecatechismus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/meesters.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/michael.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/middelbaar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/missale.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/missaleeo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/navolging.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/nieuwe_franciscus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/nrl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/orgel_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/orthodox.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/positief.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/preken.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/prentencatechismus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/psalmen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/psalmenzevenkerken.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/radiomarianederland_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/radiomariavlaanderen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/radiomariavlaanderen_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/radiovatican5_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/radiovatican_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/randomizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/samuel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/schatkamer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/schatkamer2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/seconden.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/sporen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/sprekenmetgod.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/sqpn_radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/sterketijden.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/summa.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/taize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/tijdmetjezus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/trente.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/tweetenmetgod.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/voorleesbijbel2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/youcat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/zevenkerken.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/zingtjubilate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/zuidinga.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/zustermarianne.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/collection/zwartepeper.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_bak___" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alledaags.py" afterPath="$PROJECT_DIR$/alledaags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bibleref.py" afterPath="$PROJECT_DIR$/bibleref.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/cards.py" afterPath="$PROJECT_DIR$/collection/cards.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid.py" afterPath="$PROJECT_DIR$/grid.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yql.py" afterPath="$PROJECT_DIR$/yql.py" />
     </list>
     <ignored path="alledaags.iws" />
@@ -56,103 +137,7 @@
     <favorites_list name="alledaags" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="yql.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yql.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2994" selection-end="2994" vertical-scroll-proportion="-11.4" vertical-offset="885" max-vertical-offset="2820">
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sync.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radio.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/radio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="24" selection-start="666" selection-end="666" vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="594">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grid.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="975">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cards.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/cards.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.08" vertical-offset="2" max-vertical-offset="1995">
-              <folding>
-                <element signature="e#49#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alledaags.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alledaags.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="10" selection-start="290" selection-end="290" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1125">
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="15" selection-start="603" selection-end="603" vertical-scroll-proportion="-4.2" vertical-offset="135" max-vertical-offset="1725">
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reset_database.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reset_database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -165,17 +150,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bibleref.py" />
-        <option value="$PROJECT_DIR$/collection/data.py" />
-        <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/collection/source.py" />
-        <option value="$PROJECT_DIR$/my_encrypting.py" />
-        <option value="$PROJECT_DIR$/model.py" />
-        <option value="$PROJECT_DIR$/grid.py" />
-        <option value="$PROJECT_DIR$/yql.py" />
-        <option value="$PROJECT_DIR$/sync.py" />
-        <option value="$PROJECT_DIR$/alledaags.py" />
-        <option value="$PROJECT_DIR$/radio.py" />
+        <option value="$PROJECT_DIR$/collection/kwartetten.py" />
+        <option value="$PROJECT_DIR$/collection/koningsoord_radio.py" />
+        <option value="$PROJECT_DIR$/collection/koningsoord.py" />
+        <option value="$PROJECT_DIR$/collection/kinderwoorddienst.py" />
+        <option value="$PROJECT_DIR$/collection/kerkvaders.py" />
+        <option value="$PROJECT_DIR$/collection/kenteringen.py" />
+        <option value="$PROJECT_DIR$/collection/katholieklevenpodcast.py" />
+        <option value="$PROJECT_DIR$/collection/katholiekleven.py" />
+        <option value="$PROJECT_DIR$/collection/kapucijnen.py" />
+        <option value="$PROJECT_DIR$/collection/jozefmaria.py" />
+        <option value="$PROJECT_DIR$/collection/innerlijkleven.py" />
+        <option value="$PROJECT_DIR$/collection/ignatiaansbidden.py" />
+        <option value="$PROJECT_DIR$/collection/huissen.py" />
+        <option value="$PROJECT_DIR$/collection/holyhome.py" />
+        <option value="$PROJECT_DIR$/collection/hemelstraat.py" />
+        <option value="$PROJECT_DIR$/collection/heiligen.py" />
+        <option value="$PROJECT_DIR$/collection/hanssmits.py" />
+        <option value="$PROJECT_DIR$/collection/hagen.py" />
+        <option value="$PROJECT_DIR$/collection/gregoriaans_radio.py" />
+        <option value="$PROJECT_DIR$/collection/goudenboek.py" />
+        <option value="$PROJECT_DIR$/collection/geudens.py" />
+        <option value="$PROJECT_DIR$/collection/getijden.py" />
+        <option value="$PROJECT_DIR$/collection/gedichten.py" />
+        <option value="$PROJECT_DIR$/collection/gebedenboek.py" />
+        <option value="$PROJECT_DIR$/collection/gebeden.py" />
+        <option value="$PROJECT_DIR$/collection/ewtn_mutsaerts.py" />
+        <option value="$PROJECT_DIR$/collection/ewtn.py" />
+        <option value="$PROJECT_DIR$/collection/eerstecommunie.py" />
+        <option value="$PROJECT_DIR$/collection/eerherstel.py" />
+        <option value="$PROJECT_DIR$/collection/dominicanenradio.py" />
+        <option value="$PROJECT_DIR$/collection/dominicanenpreek.py" />
+        <option value="$PROJECT_DIR$/collection/dagelijksgebed.py" />
+        <option value="$PROJECT_DIR$/collection/dagelijkseverbinding.py" />
+        <option value="$PROJECT_DIR$/collection/dagelijksevangelie.py" />
+        <option value="$PROJECT_DIR$/collection/dagelijksbijbelcitaat2.py" />
+        <option value="$PROJECT_DIR$/collection/corona.py" />
+        <option value="$PROJECT_DIR$/collection/compendium.py" />
+        <option value="$PROJECT_DIR$/collection/cards.py" />
+        <option value="$PROJECT_DIR$/collection/bots.py" />
+        <option value="$PROJECT_DIR$/collection/bloemlezing.py" />
+        <option value="$PROJECT_DIR$/collection/bijbeljaar.py" />
+        <option value="$PROJECT_DIR$/collection/biddenonderweg_radio.py" />
+        <option value="$PROJECT_DIR$/collection/biddenonderweg.py" />
+        <option value="$PROJECT_DIR$/collection/beeldmeditatie.py" />
+        <option value="$PROJECT_DIR$/collection/barroux_radio.py" />
+        <option value="$PROJECT_DIR$/collection/avondwoordjes2.py" />
+        <option value="$PROJECT_DIR$/collection/avondwoordjes.py" />
+        <option value="$PROJECT_DIR$/collection/atotz.py" />
+        <option value="$PROJECT_DIR$/collection/andypenne.py" />
+        <option value="$PROJECT_DIR$/collection/adventskalender.py" />
+        <option value="$PROJECT_DIR$/collection/adoration.py" />
       </list>
     </option>
   </component>
@@ -346,6 +371,11 @@
         <option name="myModuleName" value="alledaags" />
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/collection" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.alledaags">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -530,10 +560,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-15" width="1920" height="1076" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2553419" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26068377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,206 +599,453 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yql.py">
+    <entry file="file://$PROJECT_DIR$/collection/koningsoord_radio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="900">
+        <state line="64" column="0" selection-start="3049" selection-end="3049" vertical-scroll-proportion="0.97652084" vertical-offset="45" max-vertical-offset="1065">
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yql.py">
+    <entry file="file://$PROJECT_DIR$/collection/koningsoord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="900">
+        <state line="84" column="0" selection-start="4313" selection-end="4313" vertical-scroll-proportion="0.97652084" vertical-offset="345" max-vertical-offset="1365">
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibleref.py">
+    <entry file="file://$PROJECT_DIR$/collection/kinderwoorddienst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="13" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.95394737" vertical-offset="0" max-vertical-offset="5670">
+        <state line="73" column="0" selection-start="3581" selection-end="3581" vertical-scroll-proportion="0.97652084" vertical-offset="180" max-vertical-offset="1200">
           <folding>
-            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2to3/collection/abc.py">
+    <entry file="file://$PROJECT_DIR$/collection/kerkvaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+        <state line="86" column="0" selection-start="4102" selection-end="4102" vertical-scroll-proportion="0.97652084" vertical-offset="375" max-vertical-offset="1395">
           <folding>
-            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bible.py">
+    <entry file="file://$PROJECT_DIR$/collection/kenteringen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3810">
+        <state line="65" column="0" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.97652084" vertical-offset="60" max-vertical-offset="1080">
           <folding>
-            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinja_templates.py">
+    <entry file="file://$PROJECT_DIR$/collection/katholieklevenpodcast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+        <state line="76" column="0" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.97652084" vertical-offset="225" max-vertical-offset="1245">
           <folding>
-            <element signature="e#0#13#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2to3/collection/dagelijksevangelie.py">
+    <entry file="file://$PROJECT_DIR$/collection/katholiekleven.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+        <state line="71" column="0" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.97402596" vertical-offset="165" max-vertical-offset="1170">
           <folding>
-            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2to3/randomizer.py">
+    <entry file="file://$PROJECT_DIR$/collection/kapucijnen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="56" selection-start="661" selection-end="661" vertical-scroll-proportion="-14.4" vertical-offset="0" max-vertical-offset="2385">
+        <state line="76" column="0" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.97652084" vertical-offset="225" max-vertical-offset="1245">
           <folding>
-            <element signature="e#0#13#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2to3/collection/bijbeljaar.py">
+    <entry file="file://$PROJECT_DIR$/collection/jozefmaria.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6420">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <folding>
-            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_init.py">
+    <entry file="file://$PROJECT_DIR$/collection/innerlijkleven.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+        <state line="63" column="0" selection-start="2792" selection-end="2792" vertical-scroll-proportion="0.97652084" vertical-offset="30" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/ignatiaansbidden.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.032017075" vertical-offset="0" max-vertical-offset="1965">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/huissen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="2747" selection-end="2747" vertical-scroll-proportion="0.97652084" vertical-offset="0" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/holyhome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="12" selection-start="4454" selection-end="4454" vertical-scroll-proportion="0.97652084" vertical-offset="435" max-vertical-offset="1455">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/hemelstraat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="4119" selection-end="4119" vertical-scroll-proportion="0.97402596" vertical-offset="300" max-vertical-offset="1305">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/heiligen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="4382" selection-end="4382" vertical-scroll-proportion="0.97652084" vertical-offset="495" max-vertical-offset="1515">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/hanssmits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="4141" selection-end="4141" vertical-scroll-proportion="0.97652084" vertical-offset="360" max-vertical-offset="1380">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/hagen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2772" selection-end="2772" vertical-scroll-proportion="0.97652084" vertical-offset="30" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/gregoriaans_radio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/goudenboek.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="8" selection-start="3817" selection-end="3817" vertical-scroll-proportion="0.97652084" vertical-offset="285" max-vertical-offset="1305">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/geudens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="3362" selection-end="3362" vertical-scroll-proportion="0.97652084" vertical-offset="195" max-vertical-offset="1215">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/getijden.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.016008537" vertical-offset="0" max-vertical-offset="937">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2to3/api_ai.py">
+    <entry file="file://$PROJECT_DIR$/collection/gedichten.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
           <folding>
-            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_encrypting.py">
+    <entry file="file://$PROJECT_DIR$/collection/gebedenboek.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="21" selection-start="582" selection-end="582" vertical-scroll-proportion="0.39473686" vertical-offset="0" max-vertical-offset="912">
+        <state line="2" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.032017075" vertical-offset="0" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/gebeden.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="20" selection-start="3356" selection-end="3356" vertical-scroll-proportion="0.97652084" vertical-offset="60" max-vertical-offset="1080">
           <folding>
-            <element signature="e#0#13#0" expanded="false" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/collection/ewtn_mutsaerts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="603" selection-end="603" vertical-scroll-proportion="-4.2" vertical-offset="135" max-vertical-offset="1725">
+        <state line="79" column="0" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.97652084" vertical-offset="270" max-vertical-offset="1290">
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
+    <entry file="file://$PROJECT_DIR$/collection/ewtn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reset_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+        <state line="71" column="0" selection-start="3396" selection-end="3396" vertical-scroll-proportion="0.97402596" vertical-offset="165" max-vertical-offset="1170">
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/radio.html">
+    <entry file="file://$PROJECT_DIR$/collection/eerstecommunie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="34" selection-start="9201" selection-end="9201" vertical-scroll-proportion="0.9327731" vertical-offset="1650" max-vertical-offset="2325">
+        <state line="69" column="16" selection-start="3681" selection-end="3681" vertical-scroll-proportion="0.97652084" vertical-offset="120" max-vertical-offset="1140">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/eerherstel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="3400" selection-end="3400" vertical-scroll-proportion="0.97652084" vertical-offset="195" max-vertical-offset="1215">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/dominicanenradio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="3518" selection-end="3518" vertical-scroll-proportion="0.97652084" vertical-offset="270" max-vertical-offset="1290">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/dominicanenpreek.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2960" selection-end="2960" vertical-scroll-proportion="0.97652084" vertical-offset="60" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/dagelijksgebed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/dagelijkseverbinding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="16" selection-start="4089" selection-end="4089" vertical-scroll-proportion="0.97402596" vertical-offset="255" max-vertical-offset="1260">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/dagelijksevangelie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.032017075" vertical-offset="0" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collection/data.py">
+    <entry file="file://$PROJECT_DIR$/collection/dagelijksbijbelcitaat2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="338" selection-end="338" vertical-scroll-proportion="-9.454545" vertical-offset="5706" max-vertical-offset="6300">
-          <folding />
+        <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.048025616" vertical-offset="0" max-vertical-offset="1230">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collection/source.py">
+    <entry file="file://$PROJECT_DIR$/collection/corona.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="29" selection-start="4030" selection-end="4030" vertical-scroll-proportion="0.5050505" vertical-offset="1095" max-vertical-offset="3855">
-          <folding />
+        <state line="66" column="12" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.97652084" vertical-offset="75" max-vertical-offset="1095">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/compendium.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/collection/cards.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.08" vertical-offset="2" max-vertical-offset="1995">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
           <folding>
-            <element signature="e#49#64#0" expanded="true" />
+            <element signature="e#71#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grid.py">
+    <entry file="file://$PROJECT_DIR$/collection/bots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="975">
+        <state line="83" column="0" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.97652084" vertical-offset="330" max-vertical-offset="1350">
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alledaags.py">
+    <entry file="file://$PROJECT_DIR$/collection/bloemlezing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="290" selection-end="290" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="1125">
+        <state line="83" column="0" selection-start="4142" selection-end="4142" vertical-scroll-proportion="0.97652084" vertical-offset="330" max-vertical-offset="1350">
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sync.py">
+    <entry file="file://$PROJECT_DIR$/collection/bijbeljaar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="390">
+        <state line="32" column="24" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.5194805" vertical-offset="0" max-vertical-offset="6435">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/biddenonderweg_radio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="53" selection-end="53" vertical-scroll-proportion="0.016008537" vertical-offset="0" max-vertical-offset="937">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yql.py">
+    <entry file="file://$PROJECT_DIR$/collection/biddenonderweg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2994" selection-end="2994" vertical-scroll-proportion="-11.4" vertical-offset="885" max-vertical-offset="2820">
+        <state line="89" column="0" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.97652084" vertical-offset="420" max-vertical-offset="1440">
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/radio.py">
+    <entry file="file://$PROJECT_DIR$/collection/beeldmeditatie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="666" selection-end="666" vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="594">
+        <state line="73" column="12" selection-start="3423" selection-end="3423" vertical-scroll-proportion="0.97652084" vertical-offset="180" max-vertical-offset="1200">
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/barroux_radio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="0" selection-start="5436" selection-end="5436" vertical-scroll-proportion="0.97652084" vertical-offset="615" max-vertical-offset="1635">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/avondwoordjes2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="4981" selection-end="4981" vertical-scroll-proportion="0.97402596" vertical-offset="510" max-vertical-offset="1515">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/avondwoordjes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="4256" selection-end="4256" vertical-scroll-proportion="0.97402596" vertical-offset="435" max-vertical-offset="1440">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/atotz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="8" selection-start="5211" selection-end="5211" vertical-scroll-proportion="0.97652084" vertical-offset="570" max-vertical-offset="2055">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/andypenne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="3413" selection-end="3413" vertical-scroll-proportion="0.97402596" vertical-offset="165" max-vertical-offset="1170">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/adventskalender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="8" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.8484525" vertical-offset="0" max-vertical-offset="937">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/adoration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="16" selection-start="3129" selection-end="3129" vertical-scroll-proportion="0.97652084" vertical-offset="75" max-vertical-offset="1095">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/abc_thomas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
