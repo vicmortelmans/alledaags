@@ -80,4 +80,4 @@ class Prentencatechismus(Card):
                     message = "No data found on %s (%s)" % (site, str(e))
                     logging.error(title + " : " + message)
                     report_error_by_mail(title, message)
-                time.sleep(1)  # be gently on the host
+                time.sleep(0.1)  # be gently on the host

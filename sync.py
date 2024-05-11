@@ -11,7 +11,7 @@ def initHandler(request):
     return flask_response
 
 
-def SyncHandler(request):
+def syncHandler(request):
     key = request.args.get('key')
     for card in cards.cards_list + cards.radios_list:
         if not key or card.key == key:

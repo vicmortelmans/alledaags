@@ -6,7 +6,7 @@ from lxml import html, etree
 from lxml.html import HtmlComment
 import urllib.request, urllib.error, urllib.parse
 import re
-from source import Card, Radio  # used in the cards
+from collection.source import Card, Radio  # used in the cards
 import chardet
 
 

@@ -1,105 +1,105 @@
-#import collection.adventskalender
-#import collection.ignatiaansbidden
-import collection.heiligen
-import collection.tweetenmetgod
-#import collection.schatkamer
-import collection.schatkamer2
-import collection.ewtn_mutsaerts
-import collection.biddenonderweg
-#import collection.lichtopmijnpad  # lats entry jan 2021
-#import collection.sterketijden  # lats entry jan 2021
-import collection.andypenne
-#import collection.corona
-import collection.dagelijksgebed
-import collection.dagelijkseverbinding
-import collection.samuel
-import collection.missale
-import collection.dagelijksbijbelcitaat2
-import collection.lezingenvandedag
-import collection.lectionarium
-import collection.zevenkerken
-import collection.psalmenzevenkerken
-import collection.dagelijksevangelie
-import collection.leesrooster2
-import collection.nrl
-import collection.preken
-import collection.gedichten
-import collection.atotz
-import collection.compendium
-import collection.nieuwe_franciscus
-import collection.prentencatechismus
-import collection.bots
-import collection.ewtn
-import collection.gebeden
-import collection.bijbeljaar
-import collection.luistertnaarhem
-import collection.voorleesbijbel2
-import collection.goudenboek
-import collection.beeldmeditatie
-#import collection.kapucijnen  # last entry in 2018
-import collection.youcat
-import collection.kinderwoorddienst
-import collection.katholieklevenpodcast
-import collection.katholiekleven
-import collection.jozefmaria
-import collection.seconden
-import collection.kerkvaders  # still on http
-import collection.bloemlezing
-import collection.michael
-#import collection.hemelstraat
-import collection.eerstecommunie
-import collection.kenteringen
-import collection.radiomariavlaanderen  # still on http
-import collection.missaleeo
-import collection.mechelsecatechismus
-import collection.trente
-import collection.middelbaar
-import collection.innerlijkleven
-#import collection.zingtjubilate  #abandoned implementation half way
-import collection.zuidinga
-import collection.dominicanenradio
-import collection.dominicanenpreek
-import collection.abc_thomas
-import collection.navolging
-import collection.levenmetignatius
-#import collection.avondwoordjes
-import collection.avondwoordjes2
-#import collection.sprekenmetgod
-import collection.kwartetten
-import collection.gebedenboek
-import collection.tijdmetjezus
-import collection.hanssmits
-import collection.taize
-import collection.sporen
-import collection.orthodox
-import collection.summa
-import collection.holyhome
-import collection.eerherstel
-import collection.positief
-import collection.psalmen
-import collection.getijden
-import collection.koningsoord
-#import collection.zustermarianne
-import collection.zwartepeper
-import collection.huissen
-import collection.hagen
-import collection.geudens
-import collection.adoration
-import collection.meesters
-import collection.radiomariavlaanderen_radio
-import collection.radiomarianederland_radio
-import collection.biddenonderweg_radio
-import collection.gregoriaans_radio
-import collection.orgel_radio
-import collection.koningsoord_radio
-import collection.barroux_radio
-import collection.radiovatican_radio
-import collection.radiovatican5_radio
-#import collection.sqpn_radio
-#import collection.marytown
-import collection.lourdes
-import collection.livemass
-import collection.source
+#from collection import adventskalender
+#from collection import ignatiaansbidden
+from collection import heiligen
+from collection import tweetenmetgod
+#from collection import schatkamer
+from collection import schatkamer2
+from collection import ewtn_mutsaerts
+from collection import biddenonderweg
+#from collection import lichtopmijnpad  # lats entry jan 2021
+#from collection import sterketijden  # lats entry jan 2021
+from collection import andypenne
+#from collection import corona
+from collection import dagelijksgebed
+from collection import dagelijkseverbinding
+from collection import samuel
+from collection import missale
+from collection import dagelijksbijbelcitaat2
+from collection import lezingenvandedag
+from collection import lectionarium
+from collection import zevenkerken
+from collection import psalmenzevenkerken
+from collection import dagelijksevangelie
+from collection import leesrooster2
+from collection import nrl
+from collection import preken
+from collection import gedichten
+from collection import atotz
+from collection import compendium
+from collection import nieuwe_franciscus
+from collection import prentencatechismus
+from collection import bots
+from collection import ewtn
+from collection import gebeden
+from collection import bijbeljaar
+from collection import luistertnaarhem
+from collection import voorleesbijbel2
+from collection import goudenboek
+from collection import beeldmeditatie
+#from collection import kapucijnen  # last entry in 2018
+from collection import youcat
+from collection import kinderwoorddienst
+from collection import katholieklevenpodcast
+from collection import katholiekleven
+from collection import jozefmaria
+from collection import seconden
+from collection import kerkvaders  # still on http
+from collection import bloemlezing
+from collection import michael
+#from collection import hemelstraat
+from collection import eerstecommunie
+from collection import kenteringen
+from collection import radiomariavlaanderen  # still on http
+from collection import missaleeo
+from collection import mechelsecatechismus
+from collection import trente
+from collection import middelbaar
+from collection import innerlijkleven
+#from collection import zingtjubilate  #abandoned implementation half way
+from collection import zuidinga
+from collection import dominicanenradio
+from collection import dominicanenpreek
+from collection import abc_thomas
+from collection import navolging
+from collection import levenmetignatius
+#from collection import avondwoordjes
+from collection import avondwoordjes2
+#from collection import sprekenmetgod
+from collection import kwartetten
+from collection import gebedenboek
+from collection import tijdmetjezus
+from collection import hanssmits
+from collection import taize
+from collection import sporen
+from collection import orthodox
+from collection import summa
+from collection import holyhome
+from collection import eerherstel
+from collection import positief
+from collection import psalmen
+from collection import getijden
+from collection import koningsoord
+#from collection import zustermarianne
+from collection import zwartepeper
+from collection import huissen
+from collection import hagen
+from collection import geudens
+from collection import adoration
+from collection import meesters
+from collection import radiomariavlaanderen_radio
+from collection import radiomarianederland_radio
+from collection import biddenonderweg_radio
+from collection import gregoriaans_radio
+from collection import orgel_radio
+from collection import koningsoord_radio
+from collection import barroux_radio
+from collection import radiovatican_radio
+from collection import radiovatican5_radio
+#from collection import sqpn_radio
+#from collection import marytown
+from collection import lourdes
+from collection import livemass
+from collection import source
 import logging
 
 

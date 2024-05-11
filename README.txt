@@ -1,3 +1,5 @@
+source env/bin/activate
+
 mariadb:
  - sudo apt install mariadb (that should come with loading the requirements.txt as well)
  - install MariaDB Connector/C from the CS Package Repository:
@@ -9,7 +11,8 @@ https://mariadb.com/docs/server/connect/programming-languages/c/install/#CS_Pack
    > GRANT ALL PRIVILEGES ON alledaags.* TO alledaags@localhost;
  - python reset_database.py
 
-SERVER=http://localhost gunicorn --bind 0.0.0.0:5000 wsgi:app
+SERVER=http://localhost python alledaags.py
+SERVER=http://localhost gunicorn --bind 0.0.0.0:8080 wsgi:app
 
 Installed a new module?
 

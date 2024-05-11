@@ -1,5 +1,8 @@
 2to3==1.0
+Babel==2.15.0
+beautifulsoup4==4.12.3
 blinker==1.8.0
+bs4==0.0.2
 chardet==5.2.0
 click==8.1.7
 Flask==3.0.3
@@ -14,6 +17,7 @@ mariadb==1.1.10
 MarkupSafe==2.1.5
 packaging==24.0
 pycharm-debug===debug
+soupsieve==2.5
 SQLAlchemy==2.0.29
 typing_extensions==4.11.0
 urlfetch==2.0.1

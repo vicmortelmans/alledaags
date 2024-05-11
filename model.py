@@ -16,12 +16,14 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mariadb+mariadbconnector://alledaags:ge
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-def insert(object):
-    db.session.add(object)
+def insert(item):
+    db.session.add(item)
 
 def commit():
     db.session.commit()
 
+def get_or_insert(item):
+    return db.session.merge(item)
 
 # datatype mappings: https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html#mapped-column-derives-the-datatype-and-nullability-from-the-mapped-annotation
 # mapping multiple type configurations: https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html#mapping-multiple-type-configurations-to-python-types
@@ -35,28 +37,6 @@ class Cache(db.Model):  # the key is lang.form
 class Historical(db.Model):  # the key is the hash string (e.g. MzU5NjkwNTMzNTQ2Mjk=)
     hash: Mapped[str] = mapped_column(primary_key=True)
     data: Mapped[str]
-
-
-class Historical_futures():
-    # created in grid.py and passed to each card's html() method, which passes it to pick(), defined in source.py
-    # which passes it to my_encrypt() in my_encrypting.py, where a Historical object is added
-    def __init__(self):
-        self.l = []
-
-    def add(self, f):
-        self.l.append(f)
-
-    def get_or_insert(self, object):
-        pass
-
-    def process(self):
-        entities = []
-        for f in self.l:
-            db.session.add(f)
-            entities.append(f.get_result())
-
-        #ndb.put_multi(entities)
-        logging.info("Storing data for sharing link done")
 
 
 class DailyFeed(db.Model):  # there's only one item at any time, key is "dailyfeed"

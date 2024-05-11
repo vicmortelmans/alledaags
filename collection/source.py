@@ -15,7 +15,7 @@ class Source(object):
     @property
     def data(self):
         logging.debug("Retrieving card data from datastore: start")
-        stored = model.cache.get_by_id(self._key, use_memcache=True)
+        stored = model.db.session.execute(model.db.select(model.Cache).filter_by(key=self._key)).scalar_one()
         logging.debug("Retrieving card data from datastore: stop")
         self._data = {}
         if stored.json:
@@ -231,13 +231,15 @@ class Source(object):
             logging.exception("AttributeError in harvestSync()")
             pass
         else:
-            stored = model.cache.get_or_insert(self._key)
-            stored.json = json.dumps(self._data)
+            stored = model.Cache()
+            stored.key = self._key
+            stored = model.get_or_insert(stored)
+            stored.json = json.dumps(self._data).encode('utf-8')
             try:
                 stored.image = urlfetch.Fetch(self._data[self._blob]).content
             except (KeyError, AttributeError):
                 pass
-            stored.put()
+            model.db.session.commit()
 
     def init(self):
         try:
@@ -246,9 +248,11 @@ class Source(object):
         except AttributeError:
             pass
         else:
-            stored = model.cache.get_or_insert(self._key)
-            stored.json = json.dumps(self._data)
-            stored.put()
+            stored = model.Cache()
+            stored.key = self._key
+            stored = model.get_or_insert(stored)
+            stored.json = json.dumps(self._data).encode('utf-8')
+            model.db.session.commit()
 
 
 class Card(Source):

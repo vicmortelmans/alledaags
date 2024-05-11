@@ -12,7 +12,7 @@ import yql
 def sync_init():
     return sync.initHandler(request)
 
-@app.routes("/sync")
+@app.route("/sync")
 def sync_sync():
     return sync.syncHandler(request)
 
@@ -26,13 +26,13 @@ def api_ai_biblePassage():
 
 @app.route("/image/<key>")
 def image_image(key):
-    return image.image(request,key)
+    return image.imageHandler(request, key)
 
 @app.route("/random/<key>")
 def randomizer_random(key):
     return randomizer.randomHandler(request,key)
 
-@app.rout("/dailyfeed.rss")
+@app.route("/dailyfeed.rss")
 def randomizer_dailyFeed():
     return randomizer.dailyFeedHandler(request)
 
@@ -60,19 +60,19 @@ def yql_bibleref():
 
 @app.route("/yql/bible")
 def yql_bible():
-    return yql.bibleHandler(request)
+    return yql.yqlBibleHandler(request)
 
 @app.route("/bibletest")
 def yql_bibleTest():
-    return yql.bibleTestHandler(request)
+    return yql.yqlBibleTestHandler(request)
 
 @app.route("/playlist-latest")
 def yql_yqlPlaylistLatest():
-    return yql.yqlPlayListLatestHandler(request)
+    return yql.yqlPlaylistLatestHandler(request)
 
 @app.route("/lectionarium")
 def lectionarium_lectionarium():
     return lectionarium.lectionariumHandler(request)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port='8080', debug=True)
