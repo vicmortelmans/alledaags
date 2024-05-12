@@ -1,6 +1,6 @@
 import base64
 import urllib.request, urllib.parse, urllib.error
-from model import Historical, insert
+import model
 import logging
 
 
@@ -18,14 +18,18 @@ def my_encode_path_elements(x):
 
 
 def my_encrypt(key, clear):
+    # key is typically filled in with SECRET declared above
     hash_string = __fnv_hash(clear)
-    historical = Historical(hash=hash_string, data=clear)
-    insert(historical)
-    logging.info("Storing data for sharing link done (uncommitted)")
+    historical = model.Historical(hash=hash_string, data=bytes(clear,'utf-8'))
+    logging.info(f"Inserting in historical {historical}")
+    model.db.session.merge(historical)
+    model.db.session.commit()
+    logging.info("Inserting in historical done (committed)")
     return hash_string
 
 
 def my_decrypt(key, enc):
+    # key is typically filled in with SECRET declared above
     if len(enc) > 25:  # supporting 'long' URLs
         dec = []
         enc = base64.urlsafe_b64decode(enc)
@@ -35,16 +39,17 @@ def my_decrypt(key, enc):
             dec.append(dec_c)
         clear = "".join(dec)
     else:
-        e = Historical.get_by_id(enc)
+        logging.info(f"Querying historical for {enc}")
+        e = model.db.session.execute(model.db.select(model.Historical).filter_by(hash=enc)).scalar_one()
         clear = e.data
     return clear
 
 
-def __fnv_hash(key):
+def __fnv_hash(text):
     h = 2166136261
 
-    for k in key:
+    for k in text:
         h = (h*16777619)^ord(k)
 
     # Return 8 bit URL
-    return base64.b64encode(str(h%281474976710656))
+    return base64.b64encode(bytes(str(h%281474976710656),'utf-8')).decode('utf-8')

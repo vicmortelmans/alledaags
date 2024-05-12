@@ -8,9 +8,7 @@ class BijbelJaar(Card):
         self._key = "bijbeljaar"
         self._category = "bible"
         self._type = "daily"
-        self._data = {
-            'index': "https://bijbeljaar.nl/gemist/"
-        }
+        self._data = {}
         self._template = """
             <div class="item" id="bijbeljaar">
                 <div class="card bible">
@@ -415,6 +413,7 @@ class BijbelJaar(Card):
         }
         now = datetime.now().strftime("%d/%m")
         data = {}
+        data['index'] = "https://bijbeljaar.nl/gemist/"
         data['name'] = "Bible in One Year"
         data['section'] = now
         data['title'] = list[now]["title"]

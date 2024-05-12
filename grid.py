@@ -3,7 +3,7 @@ from flask import Response
 from jinja_templates import jinja_environment
 import json
 from my_encrypting import SECRET, my_decrypt
-from model import commit
+import model
 import logging
 
 
@@ -52,8 +52,8 @@ def gridHandler(request, historical):
         historical=historical
     )
     response += content_after_cards
-    logging.debug("Storing card historical data to datastore: start")
-    commit()  # here the hash keys and json contents of the cards are stored to the database
-    logging.debug("Storing card historical data to datastore: stop")
+    logging.debug("Committing card historical data to database: start")
+    model.db.session.commit()  # here the hash keys and json contents of the cards are stored to the database
+    logging.debug("Committing card historical data to database: stop")
     flask_response = Response(response)
     return flask_response

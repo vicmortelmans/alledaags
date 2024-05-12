@@ -8,18 +8,22 @@ import model
 from my_encrypting import SECRET, my_decrypt, my_encrypt, my_encode
 import os
 import random
+from sqlalchemy.exc import NoResultFound
 
 server = os.environ['SERVER']
 
 class Source(object):
     @property
     def data(self):
-        logging.debug("Retrieving card data from datastore: start")
-        stored = model.db.session.execute(model.db.select(model.Cache).filter_by(key=self._key)).scalar_one()
-        logging.debug("Retrieving card data from datastore: stop")
-        self._data = {}
-        if stored.json:
-            self._data = json.loads(stored.json)
+        try:
+            logging.info(f"Querying cache for '{self._key}': start")
+            stored = model.db.session.execute(model.db.select(model.Cache).filter_by(key=self._key)).scalar_one()
+            logging.info("Querying cache: item found")
+            self._data = {}
+            if stored.json:
+                self._data = json.loads(stored.json)
+        except NoResultFound:
+            logging.info("Querying cache: nothing found")
         return self._data
 
     @property
@@ -236,7 +240,7 @@ class Source(object):
             stored = model.get_or_insert(stored)
             stored.json = json.dumps(self._data).encode('utf-8')
             try:
-                stored.image = urlfetch.Fetch(self._data[self._blob]).content
+                stored.image = urlfetch.get(self._data[self._blob]).content
             except (KeyError, AttributeError):
                 pass
             model.db.session.commit()

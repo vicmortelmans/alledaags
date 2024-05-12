@@ -1,5 +1,8 @@
+import bs4
 from collection.data import *
 from collection.source import Card
+import html
+import urllib.request, urllib.parse, urllib.error
 
 
 class Heiligen(Card):
@@ -55,16 +58,33 @@ class Heiligen(Card):
 
     def harvestSync(self):
         # load from web
-        feed = "http://takes-long.katholiekkwartetten.appspot.com/heiligen-net.rss"
-        harvest = getRSS(feed)
+        url = "http://heiligen.net/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
+        xpath = "(//div[@id='inhoud']//table)[1]//td[2]/a"
+        harvest = getHtml(url, xpath)
+        items = []
+        for a in harvest['a']:
+            item_url = "http://heiligen.net" + a['href']
+            try:
+                html_string = urllib.request.urlopen(item_url).read()
+                # html isn't pretty, so using beautifulsoup for parsing i.o. ElementTree
+                soup = bs4.BeautifulSoup(html_string)
+                title = soup.find('title').text
+                content = soup.find('div', id='inhoud').prettify()
+                items.append({
+                    'title': title,
+                    'description': html.escape(content),
+                    'url': item_url
+                })
+            except AttributeError:
+                logging.warning("No complete data found on %s" % item_url)
         try:
             # find the longest entry
             longestItemLength = 0
-            for item in harvest['item']:
+            for item in items:
                 if 'description' in item and len(item['description']) > longestItemLength:
                     longestItemLength = len(item['description'])
                     longestItem = item
-            site = longestItem['link']
+            site = longestItem['url']
             xpath1 = "//div[contains(@id,'rompnaam')]"
             harvest1 = getHtml(site, xpath1)
             xpath2 = "//div[contains(@id,'inhoud')]//img"
@@ -74,7 +94,7 @@ class Heiligen(Card):
             }
         except (TypeError, KeyError, IndexError) as e:
             title = "Heiligen: sync error"
-            message = "No complete data found on %s (%s)" % (feed, str(e))
+            message = "No complete data found on %s (%s)" % (site, str(e))
             logging.error(title + " : " + message)
             report_error_by_mail(title, message)
         else:

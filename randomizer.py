@@ -18,6 +18,7 @@ def randomHandler(request, key=None):
         logging.info("Rendering random card for %s." % key)
         # find card class for key
         card = cards.find_card(key)
+        logging.info(f"Querying cache for {key}")
         stored = model.db.session.execute(model.db.select(model.Cache).filter_by(key=key)).scalar_one()
         if stored.json:
             data = json.loads(stored.json)
@@ -97,6 +98,7 @@ def dailyFeedHandler(request):
     current_time = datetime.now()
     today = (datetime.now() - timedelta(hours=6)).strftime("%Y-%m-%d")
     # (a new day starts at 06:00)
+    logging.info("Querying dailyfeed")
     stored = model.db.session.execute(model.db.select(model.DailyFeed).filter_by(key="dailyfeed")).scalar_one()
     if not stored.day == today:
         logging.info("It's a new day for dailyfeed: " + today)
@@ -135,6 +137,7 @@ def dailyFeedHandler(request):
                 else:
                     stored.day = today
                     stored.pubDate = current_time.strftime("%a, %d %b %Y %H:%M:%S +0000")
+                    logging.info("Commiting database")
                     model.db.session.commit()
                     break
         else:

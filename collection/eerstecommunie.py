@@ -7,6 +7,7 @@ class EersteCommunie(Card):
         self._key = "eerstecommunie"
         self._category = "catechism"
         self._type = "sequence"
+        self._data = {}
         self._template = """
             <div class="item" id="eerstecommunie">
                 <div class="card catechism">

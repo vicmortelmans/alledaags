@@ -3,10 +3,14 @@ from flask_init import app
 import grid
 import image
 import lectionarium
+import logging
 import radio
 import randomizer
 import sync
+import sys
 import yql
+
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d %(funcName)s] %(message)s', datefmt='%Y-%m-%d:%H:%M:%S', level=logging.DEBUG)
 
 @app.route("/init")
 def sync_init():

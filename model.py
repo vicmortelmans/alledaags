@@ -1,7 +1,7 @@
 from flask_init import app
 from flask_sqlalchemy import SQLAlchemy
 import logging
-from sqlalchemy import String
+from sqlalchemy import Column, String, LargeBinary
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
@@ -16,27 +16,19 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mariadb+mariadbconnector://alledaags:ge
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-def insert(item):
-    db.session.add(item)
-
-def commit():
-    db.session.commit()
-
-def get_or_insert(item):
-    return db.session.merge(item)
 
 # datatype mappings: https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html#mapped-column-derives-the-datatype-and-nullability-from-the-mapped-annotation
 # mapping multiple type configurations: https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html#mapping-multiple-type-configurations-to-python-types
 
 class Cache(db.Model):  # the key is lang.form
     key: Mapped[str] = mapped_column(primary_key=True)
-    json: Mapped[bytes] 
-    image: Mapped[Optional[bytes]]
+    json: Mapped[bytes] = Column(LargeBinary(length=(2**32)-1))
+    image: Mapped[Optional[bytes]] = Column(LargeBinary(length=(2**32)-1))
 
 
 class Historical(db.Model):  # the key is the hash string (e.g. MzU5NjkwNTMzNTQ2Mjk=)
     hash: Mapped[str] = mapped_column(primary_key=True)
-    data: Mapped[str]
+    data: Mapped[bytes]
 
 
 class DailyFeed(db.Model):  # there's only one item at any time, key is "dailyfeed"

@@ -72,13 +72,13 @@ class TweetenMetGod(Card):
         else:
             for i in self._data['items']:
                 site = i['url']
-                xpath = "//article"
+                xpath = "//div[@id='block-twg-content']"
                 harvest = getHtml(site, xpath)
                 item = {}
                 try:
                     item['name'] = "Tweeting with God"
-                    item['image'] = harvest['article'][0]['figure']['img']['src']
-                    item['section'] = harvest['article'][0]['div']['content'].strip()
+                    item['image'] = harvest['div']['div']['div'][0]['img']['src']
+                    item['section'] = harvest['div']['div']['h1'].strip()
                 except (TypeError, KeyError, IndexError) as e:
                     title = "TweetenMetGod: sync error"
                     message = "No data found on %s (%s)" % (site, str(e))
@@ -86,4 +86,4 @@ class TweetenMetGod(Card):
                     report_error_by_mail(title, message)
                 else:
                     i.update(item)
-                time.sleep(1)  # be gently on the host
+                time.sleep(0.1)  # be gently on the host

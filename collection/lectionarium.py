@@ -8,9 +8,7 @@ class Lectionarium(Card):
         self._key = "lectionarium"
         self._category = "lectionary"
         self._type = "daily"
-        self._data = {
-            'index': "https://lectionarium.gelovenleren.net/toc.html",
-        }
+        self._data = {}
         self._template = """
             <div class="item" id="lectionarium">
                 <div class="card lectionary">
@@ -56,6 +54,7 @@ class Lectionarium(Card):
             xpath2 = "//h2"
             harvest2 = getHtml(url2, xpath2)
             data = {
+                'index': "https://lectionarium.gelovenleren.net/toc.html",
                 'name': "Lectionarium van de Tridentijnse Mis",
                 'url': url2,
                 'image': "https://lectionarium.gelovenleren.net/resources/missaal-eo-cover.png",
