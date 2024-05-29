@@ -25,13 +25,13 @@ class Lourdes(Card):
                         {% set title = my_encode("Lourdes: " + data['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("Lourdes: " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -43,7 +43,7 @@ class Lourdes(Card):
         data = {
             'name': "Lourdes",
             'title': "Livestream",
-            'image': os.environ['SERVER'] + "/var/dove1.png",
+            'image': os.environ['SERVER'] + "/static/dove1.png",
             'url' : "https://www.youtube.com/embed/live_stream?channel=UC7zlbnNCnuAPiC3goKcFgUg&amp;rel=0"
         }  # title and image are required for the sharing concept to work
         self._data.update(data)

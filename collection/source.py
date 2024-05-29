@@ -237,7 +237,7 @@ class Source(object):
         else:
             stored = model.Cache()
             stored.key = self._key
-            stored = model.get_or_insert(stored)
+            stored = model.db.session.merge(stored)
             stored.json = json.dumps(self._data).encode('utf-8')
             try:
                 stored.image = urlfetch.get(self._data[self._blob]).content
@@ -254,7 +254,7 @@ class Source(object):
         else:
             stored = model.Cache()
             stored.key = self._key
-            stored = model.get_or_insert(stored)
+            stored = model.db.session.merge(stored)
             stored.json = json.dumps(self._data).encode('utf-8')
             model.db.session.commit()
 

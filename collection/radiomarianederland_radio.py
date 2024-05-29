@@ -38,7 +38,7 @@ class RadioMariaNederlandRadio(Radio):
         data = {
             'name': "Radio Maria Nederland",
             'title': "Live radio",
-            'image': os.environ['SERVER'] + "/var/radiomarianederland.png",
+            'image': os.environ['SERVER'] + "/static/radiomarianederland.png",
             'image-width': '304',
             'image-height': '100',
             'url': "https://www.radiomaria.nl/",

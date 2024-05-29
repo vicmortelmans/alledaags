@@ -91,7 +91,7 @@ class BarrouxRadio(Radio):
         data = {
             'name': "Abbaye du Barroux",
             'title': "Live getijden (Latijn)",
-            'image': os.environ['SERVER'] + "/var/barroux.jpg",
+            'image': os.environ['SERVER'] + "/static/barroux.jpg",
             'image-width': '304',
             'image-height': '235',
             'url': "https://www.barroux.org/en/liturgie/listen-to-our-offices.html",

@@ -38,7 +38,7 @@ class OrgelRadio(Radio):
         data = {
             'name': "Orgelradio",
             'title': "Organroxx Radio",
-            'image': os.environ['SERVER'] + "/var/organroxx-logo.png",
+            'image': os.environ['SERVER'] + "/static/organroxx-logo.png",
             'image-width': '260',
             'image-height': '141',
             'url': "https://organroxx.com/",

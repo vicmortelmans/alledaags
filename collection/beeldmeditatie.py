@@ -1,5 +1,6 @@
 from collection.data import *
 from collection.source import Card
+import os
 
 
 class BeeldMeditatie(Card):
@@ -25,13 +26,13 @@ class BeeldMeditatie(Card):
                         {% set title = my_encode("Beeldmeditatie: " + data['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("Beeldmeditatie: " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                         <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                     </div>
                 </div>
@@ -64,7 +65,7 @@ class BeeldMeditatie(Card):
         harvest = getHtml(site, xpath)
         try:
             data['original_image'] = "https://www.beeldmeditaties.nl/" + harvest['img']['src']
-            data['image'] = "https://alledaags.gelovenleren.net/image/beeldmeditatie"
+            data['image'] = os.environ['SERVER'] + "/image/beeldmeditatie"
         except (TypeError, KeyError, IndexError) as e:
             title = "BeeldMeditatie: sync error"
             message = "No image found on %s (%s)" % (site, str(e))

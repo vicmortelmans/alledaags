@@ -1,0 +1,742 @@
+{
+   "title": "Gebeden",
+   "categories": [
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "alma-redemptoris-mater-score",
+                  "alma-redemptoris-mater-nl",
+                  "alma-redemptoris-mater-la"
+               ],
+               "id": "alma-redemptoris-mater",
+               "title": "Alma Redemptoris Mater"
+            },
+            {
+               "presentations": [
+                  "sub-tuum-præsidium-score",
+                  "sub-tuum-præsidium-nl",
+                  "sub-tuum-præsidium-la"
+               ],
+               "id": "sub-tuum-præsidium",
+               "title": "Sub Tuum Præsidium"
+            },
+            {
+               "presentations": [
+                  "ave-regina-cælorum-score",
+                  "ave-regina-cælorum-nl",
+                  "ave-regina-cælorum-la"
+               ],
+               "id": "ave-regina-cælorum",
+               "title": "Ave Regina Cælorum"
+            },
+            {
+               "presentations": [
+                  "regina-cæli-score",
+                  "regina-cæli-nl",
+                  "regina-cæli-la"
+               ],
+               "id": "regina-cæli",
+               "title": "Regina Cæli"
+            },
+            {
+               "presentations": [
+                  "salve-regina-score",
+                  "salve-regina-nl",
+                  "salve-regina-la"
+               ],
+               "id": "salve-regina",
+               "title": "Salve Regina"
+            },
+            {
+               "presentations": [
+                  "pange-lingua-score",
+                  "pange-lingua-nl",
+                  "pange-lingua-la"
+               ],
+               "id": "pange-lingua",
+               "title": "Pange Lingua (Tantum Ergo)"
+            },
+            {
+               "presentations": [
+                  "adoro-te-devote-score",
+                  "adoro-te-devote-nl",
+                  "adoro-te-devote-la"
+               ],
+               "id": "adoro-te-devote",
+               "title": "Adoro te devote"
+            },
+            {
+               "presentations": [
+                  "veni-creator-spiritus-score",
+                  "veni-creator-spiritus-nl",
+                  "veni-creator-spiritus-la"
+               ],
+               "id": "veni-creator-spiritus",
+               "title": "Veni Creátor Spíritus"
+            },
+            {
+               "presentations": [
+                  "te-ioseph-celebrent-score",
+                  "te-ioseph-celebrent-nl",
+                  "te-ioseph-celebrent-la"
+               ],
+               "id": "te-ioseph-celebrent",
+               "title": "Te Ioseph celebrent"
+            },
+            {
+               "presentations": [
+                  "ave-maria-score",
+                  "ave-maria-nl-nl",
+                  "ave-maria-nl-be",
+                  "ave-maria-la"
+               ],
+               "id": "ave-maria",
+               "title": "Ave Maria"
+            },
+            {
+               "presentations": [
+                  "pater-noster-score",
+                  "pater-noster-nl",
+                  "pater-noster-la"
+               ],
+               "id": "pater-noster",
+               "title": "Pater Noster"
+            }
+         ],
+         "id": "gregoriaanse-liederen",
+         "title": "Gregoriaanse Gebeden"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "asperges-me-score",
+                  "asperges-me-nl"
+               ],
+               "id": "asperges-me",
+               "title": "Asperges me"
+            },
+            {
+               "presentations": [
+                  "vidi-aquam-score",
+                  "vidi-aquam-nl"
+               ],
+               "id": "vidi-aquam",
+               "title": "Vidi aquam"
+            },
+            {
+               "presentations": [
+                  "mass-i-kyrie",
+                  "mass-i-gloria"
+               ],
+               "id": "mass-i",
+               "title": "Mis I Lux et origo (Paastijd)"
+            },
+            {
+               "presentations": [
+                  "mass-ii-kyrie",
+                  "mass-ii-gloria"
+               ],
+               "id": "mass-ii",
+               "title": "Mis II Kyrie fons bonitatis"
+            },
+            {
+               "presentations": [
+                  "mass-iii-kyrie",
+                  "mass-iii-gloria"
+               ],
+               "id": "mass-iii",
+               "title": "Mis III Kyrie Deus sempiterne (hoogfeesten)"
+            },
+            {
+               "presentations": [
+                  "mass-iv-kyrie",
+                  "mass-iv-gloria"
+               ],
+               "id": "mass-iv",
+               "title": "Mis IV Cunctipotens Genitor Deus (Apostelfeesten)"
+            },
+            {
+               "presentations": [
+                  "mass-v-kyrie",
+                  "mass-v-gloria"
+               ],
+               "id": "mass-v",
+               "title": "Mis V Kyrie magnæ Deus potentiæ"
+            },
+            {
+               "presentations": [
+                  "mass-vi-kyrie",
+                  "mass-vi-gloria"
+               ],
+               "id": "mass-vi",
+               "title": "Mis VI Kyrie Rex Genitor"
+            },
+            {
+               "presentations": [
+                  "mass-vii-kyrie",
+                  "mass-vii-gloria"
+               ],
+               "id": "mass-vii",
+               "title": "Mis VII Kyrie Rex splendens"
+            },
+            {
+               "presentations": [
+                  "mass-viii-kyrie",
+                  "mass-viii-gloria"
+               ],
+               "id": "mass-viii",
+               "title": "Mis VIII De Angelis"
+            },
+            {
+               "presentations": [
+                  "mass-ix-kyrie",
+                  "mass-ix-gloria"
+               ],
+               "id": "mass-ix",
+               "title": "Mis IX Cum jubilo (hoogdagen en mariafeesten)"
+            },
+            {
+               "presentations": [
+                  "mass-x-kyrie",
+                  "mass-x-gloria"
+               ],
+               "id": "mass-x",
+               "title": "Mis X Alme Pater (mariafeesten)"
+            },
+            {
+               "presentations": [
+                  "mass-xi-kyrie",
+                  "mass-xi-gloria"
+               ],
+               "id": "mass-xi",
+               "title": "Mis XI Orbis factor (zondagen doorheen het jaar)"
+            },
+            {
+               "presentations": [
+                  "mass-xii-kyrie",
+                  "mass-xii-gloria"
+               ],
+               "id": "mass-xii",
+               "title": "Mis XII Pater cuncta"
+            },
+            {
+               "presentations": [
+                  "mass-xiii-kyrie",
+                  "mass-xiii-gloria"
+               ],
+               "id": "mass-xiii",
+               "title": "Mis XIII Stelliferi Conditor orbis"
+            },
+            {
+               "presentations": [
+                  "mass-xiv-kyrie",
+                  "mass-xiv-gloria"
+               ],
+               "id": "mass-xiv",
+               "title": "Mis XIV Jesu redemptor"
+            },
+            {
+               "presentations": [
+                  "mass-xv-kyrie",
+                  "mass-xv-gloria"
+               ],
+               "id": "mass-xv",
+               "title": "Mis XV Dominator Deus"
+            },
+            {
+               "presentations": [
+                  "mass-xvi-kyrie"
+               ],
+               "id": "mass-xvi",
+               "title": "Mis XVI (weekdagen in de tijd doorheen het jaar)"
+            },
+            {
+               "presentations": [
+                  "mass-xvii-kyrie"
+               ],
+               "id": "mass-xvii",
+               "title": "Mis XVII (zondagen in Advent en Vasten)"
+            },
+            {
+               "presentations": [
+                  "mass-xviii-kyrie"
+               ],
+               "id": "mass-xviii",
+               "title": "Mis XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)"
+            },
+            {
+               "presentations": [
+                  "credo-i",
+                  "credo-ii",
+                  "credo-iii",
+                  "credo-iv",
+                  "credo-v",
+                  "credo-vi",
+                  "credo-vii"
+               ],
+               "id": "kyriale-credo",
+               "title": "Credo I-II-III-IV-V-VI-VII"
+            }
+         ],
+         "id": "kyriale",
+         "title": "Kyriale"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "asperges-me-la",
+                  "asperges-me-nl",
+                  "asperges-me-score"
+               ],
+               "id": "asperges-me",
+               "title": "Asperges me"
+            },
+            {
+               "presentations": [
+                  "vidi-aquam-la",
+                  "vidi-aquam-nl",
+                  "vidi-aquam-score"
+               ],
+               "id": "vidi-aquam",
+               "title": "Vidi aquam"
+            },
+            {
+               "presentations": [
+                  "ostende-nobis-la",
+                  "ostende-nobis-nl"
+               ],
+               "id": "ostende-nobis",
+               "title": "Ostende nobis"
+            },
+            {
+               "presentations": [
+                  "kruisteken-la",
+                  "kruisteken-nl",
+                  "kruisteken-score"
+               ],
+               "id": "kruisteken",
+               "title": "Kruisteken"
+            },
+            {
+               "presentations": [
+                  "introibo-la",
+                  "introibo-nl",
+                  "introibo-score"
+               ],
+               "id": "introibo",
+               "title": "Introibo"
+            },
+            {
+               "presentations": [
+                  "confiteor-la",
+                  "confiteor-nl"
+               ],
+               "id": "confiteor",
+               "title": "Confiteor"
+            },
+            {
+               "presentations": [
+                  "misericordiam-la",
+                  "misericordiam-nl"
+               ],
+               "id": "misericordiam",
+               "title": "Misericordiam"
+            },
+            {
+               "presentations": [
+                  "kyrie-la",
+                  "kyrie-nl",
+                  "kyrie-ref"
+               ],
+               "id": "lit-kyrie",
+               "title": "Kyrie"
+            },
+            {
+               "presentations": [
+                  "gloria-la",
+                  "gloria-nl",
+                  "gloria-ref"
+               ],
+               "id": "lit-gloria",
+               "title": "Gloria"
+            },
+            {
+               "presentations": [
+                  "schriftlezingen-1"
+               ],
+               "id": "schriftlezingen",
+               "title": "Schriftlezingen"
+            },
+            {
+               "presentations": [
+                  "twaalfartikelenvanhetgeloof-la",
+                  "twaalfartikelenvanhetgeloof-nl"
+               ],
+               "id": "twaalfartikelenvanhetgeloof",
+               "title": "Credo van de apostelen"
+            },
+            {
+               "presentations": [
+                  "credo-la",
+                  "credo-nl",
+                  "credo-ref"
+               ],
+               "id": "credo",
+               "title": "Credo"
+            },
+            {
+               "presentations": [
+                  "offertorium-la",
+                  "offertorium-nl"
+               ],
+               "id": "offertorium",
+               "title": "Offertorium"
+            },
+            {
+               "presentations": [
+                  "sursum-corda-la",
+                  "sursum-corda-nl"
+               ],
+               "id": "sursum-corda",
+               "title": "Sursum corda"
+            },
+            {
+               "presentations": [
+                  "sanctus-la",
+                  "sanctus-nl",
+                  "sanctus-ref"
+               ],
+               "id": "lit-sanctus",
+               "title": "Sanctus"
+            },
+            {
+               "presentations": [
+                  "mysterium-fidei-la",
+                  "mysterium-fidei-nl"
+               ],
+               "id": "mysterium-fidei",
+               "title": "Mysterium fidei"
+            },
+            {
+               "presentations": [
+                  "per-ipsum-la",
+                  "per-ipsum-nl"
+               ],
+               "id": "per-ipsum",
+               "title": "Per Ipsum"
+            },
+            {
+               "presentations": [
+                  "pater-noster-lit-la",
+                  "pater-noster-lit-nl",
+                  "pater-noster-score",
+                  "pater-noster-score-pieters",
+                  "pater-noster-score-mozarab",
+                  "pater-noster-score-vandevelde"
+               ],
+               "id": "onzevader",
+               "title": "Onze Vader"
+            },
+            {
+               "presentations": [
+                  "agnus-dei-la",
+                  "agnus-dei-nl",
+                  "agnus-dei-ref"
+               ],
+               "id": "agnus-dei",
+               "title": "Agnus Dei"
+            },
+            {
+               "presentations": [
+                  "ite-missa-est-la",
+                  "ite-missa-est-nl",
+                  "ite-missa-est-ref"
+               ],
+               "id": "ite-missa-est",
+               "title": "Ite missa est"
+            },
+            {
+               "presentations": [
+                  "ultimam-evangelium-1",
+                  "ultimam-evangelium-2"
+               ],
+               "id": "ultimam-evangelium",
+               "title": "Ultimam Evangelium"
+            }
+         ],
+         "id": "liturgische-gebeden",
+         "title": "Liturgische gebeden"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "quicumque-1",
+                  "quicumque-2"
+               ],
+               "id": "quicumque",
+               "title": "Sýmbolum Athanasiánum"
+            },
+            {
+               "presentations": [
+                  "tedeum-1",
+                  "tedeum-2"
+               ],
+               "id": "tedeum",
+               "title": "Te Deum"
+            },
+            {
+               "presentations": [
+                  "trisagion-1",
+                  "trisagion-2"
+               ],
+               "id": "trisagion",
+               "title": "Triságium angélicum"
+            },
+            {
+               "presentations": [
+                  "geloof-la",
+                  "geloof-akte",
+                  "geloof-oefening"
+               ],
+               "id": "geloof",
+               "title": "Geloof"
+            },
+            {
+               "presentations": [
+                  "hoop-la",
+                  "hoop-akte",
+                  "hoop-oefening"
+               ],
+               "id": "hoop",
+               "title": "Hoop"
+            },
+            {
+               "presentations": [
+                  "liefde-la",
+                  "liefde-akte",
+                  "liefde-oefening"
+               ],
+               "id": "liefde",
+               "title": "Liefde"
+            },
+            {
+               "presentations": [
+                  "berouw-la",
+                  "berouw-akte",
+                  "berouw-oefening"
+               ],
+               "id": "berouw",
+               "title": "Berouw"
+            }
+         ],
+         "id": "drie-eenheid",
+         "title": "Drie-eenheid"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "geestelijkecommunie-1"
+               ],
+               "id": "geestelijkecommunie",
+               "title": "Gebed voor de geestelijke communie"
+            },
+            {
+               "presentations": [
+                  "adoro-te-devote-la",
+                  "adoro-te-devote-nl",
+                  "adoro-te-devote-score"
+               ],
+               "id": "adoro-te-devote",
+               "title": "Adoro te devote"
+            },
+            {
+               "presentations": [
+                  "pange-lingua-la",
+                  "pange-lingua-nl",
+                  "pange-lingua-score"
+               ],
+               "id": "pangelingua",
+               "title": "Pange, língua"
+            },
+            {
+               "presentations": [
+                  "psalm150-1",
+                  "psalm150-2"
+               ],
+               "id": "psalm150",
+               "title": "Psalm 150"
+            }
+         ],
+         "id": "aanbidding",
+         "title": "Aanbidding"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "venisanctespiritus-1",
+                  "venisanctespiritus-2"
+               ],
+               "id": "venisanctespiritus",
+               "title": "Veni Sancte Spiritus"
+            },
+            {
+               "presentations": [
+                  "veni-creator-spiritus-la",
+                  "veni-creator-spiritus-nl",
+                  "veni-creator-spiritus-score"
+               ],
+               "id": "veni-creator-spiritus",
+               "title": "Veni Creátor Spíritus"
+            }
+         ],
+         "id": "heilige-geest",
+         "title": "Heilige Geest"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "engel-1",
+                  "engel-2"
+               ],
+               "id": "engel",
+               "title": "De Engel des Heren"
+            },
+            {
+               "presentations": [
+                  "gedenk-1",
+                  "gedenk-2"
+               ],
+               "id": "gedenk",
+               "title": "Gedenkgebed of Memorare"
+            },
+            {
+               "presentations": [
+                  "eeraandevader-1",
+                  "eeraandevader-2"
+               ],
+               "id": "eeraandevader",
+               "title": "Eer aan de Vader"
+            },
+            {
+               "presentations": [
+                  "weesgegroet-1",
+                  "weesgegroet-2",
+                  "weesgegroet-3"
+               ],
+               "id": "weesgegroet",
+               "title": "Wees gegroet"
+            },
+            {
+               "presentations": [
+                  "rozenhoedje-1"
+               ],
+               "id": "rozenhoedje",
+               "title": "Rozenhoedje"
+            },
+            {
+               "presentations": [
+                  "stabatmater-1",
+                  "stabatmater-2"
+               ],
+               "id": "stabatmater",
+               "title": "Stabat mater"
+            },
+            {
+               "presentations": [
+                  "litanievanloreto-1",
+                  "litanievanloreto-2"
+               ],
+               "id": "litanievanloreto",
+               "title": "Litanie van Loreto"
+            }
+         ],
+         "id": "maria",
+         "title": "Maagd Maria"
+      },
+      {
+         "prayers": [
+            {
+               "presentations": [
+                  "gebedjozef-la",
+                  "gebedjozef-nl"
+               ],
+               "id": "gebedjozef",
+               "title": "Gebed tot Sint Jozef"
+            },
+            {
+               "presentations": [
+                  "gebedambrosius-1",
+                  "gebedambrosius-2"
+               ],
+               "id": "gebedambrosius",
+               "title": "Gebed van Sint Ambrosius"
+            },
+            {
+               "presentations": [
+                  "gebedaquinovoordemis-1",
+                  "gebedaquinovoordemis-2"
+               ],
+               "id": "gebedaquinovoordemis",
+               "title": "Gebed van Thomas van Aquino voor de Mis"
+            },
+            {
+               "presentations": [
+                  "lofzangvandaniel-1",
+                  "lofzangvandaniel-2"
+               ],
+               "id": "lofzangvandaniel",
+               "title": "Lofzang van Daniël"
+            },
+            {
+               "presentations": [
+                  "gebedtotdeaartsengelmichael-1",
+                  "gebedtotdeaartsengelmichael-2"
+               ],
+               "id": "gebedtotdeaartsengelmichael",
+               "title": "Gebed tot de aartsengel Michaël"
+            },
+            {
+               "presentations": [
+                  "gebedaquinonademis-1",
+                  "gebedaquinonademis-2"
+               ],
+               "id": "gebedaquinonademis",
+               "title": "Gebed van Thomas van Aquino na de Mis"
+            },
+            {
+               "presentations": [
+                  "psalm2-1",
+                  "psalm2-2"
+               ],
+               "id": "psalm2",
+               "title": "Psalm 2"
+            },
+            {
+               "presentations": [
+                  "universalis-1",
+                  "universalis-2"
+               ],
+               "id": "universalis",
+               "title": "Orátio universális (Clemens XI)"
+            },
+            {
+               "presentations": [
+                  "absoute-1",
+                  "absoute-2"
+               ],
+               "id": "absoute",
+               "title": "Absoute"
+            }
+         ],
+         "id": "voor-en-na-de-mis",
+         "title": "Voor en na de Mis"
+      }
+   ]
+}

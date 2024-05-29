@@ -45,8 +45,8 @@ to check:
    > select * from cache; 
    > select cache.key,left(cache.json,50),right(cache.json,50) from cache; 
 
-SERVER=http://localhost python alledaags.py
-SERVER=http://localhost gunicorn --bind 0.0.0.0:8080 wsgi:app
+SERVER=http://localhost:8080 python alledaags.py
+SERVER=http://localhost:8080 gunicorn --bind 0.0.0.0:8080 wsgi:app
 
 Installed a new module?
 

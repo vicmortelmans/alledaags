@@ -30,13 +30,13 @@ class Schatkamer(Card):
                         {% set title = my_encode(data['name'] + ": " + data['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode(data['name'] + ": " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -47,7 +47,7 @@ class Schatkamer(Card):
     def harvestSync(self):
         data = {
             'name': "De Schatkamer",
-            'image': "/var/schatkamer.jpg",
+            'image': "/static/schatkamer.jpg",
             'index': "https://www.deschatkamervandekathedraal.be/"
         }
         # load the json file that contains dates linked to the website url's

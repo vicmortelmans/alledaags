@@ -1,5 +1,6 @@
 from collection.data import *
 from collection.source import Card
+import os
 
 
 class GoudenBoek(Card):
@@ -28,18 +29,18 @@ class GoudenBoek(Card):
                         {% set title = my_encode(data['name'] + ": " + item['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode(data['name'] + ": " + item['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                         {% if 'image' in item %}
                         <a target="_blank" href="https://pinterest.com/pin/create/bookmarklet/?media={{image}}&url={{url}}&is_video=false&description={{title}}">
-                            <div class="icon"><img src="/var/pinterest.png"/></div>
+                            <div class="icon"><img src="/static/pinterest.png"/></div>
                         </a>
                         {% endif %}
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -67,7 +68,7 @@ class GoudenBoek(Card):
                 if 'enclosure' in feeditem:
                     item['image'] = feeditem['enclosure']['url']
                 else:
-                    item['image'] = "https://alledaags.gelovenleren.net/var/goudenboek.jpg"
+                    item['image'] = os.environ['SERVER'] + "/static/goudenboek.jpg"
                 items.append(item)
         except (TypeError, KeyError, IndexError) as e:
             title = "GoudenBoek: sync error"

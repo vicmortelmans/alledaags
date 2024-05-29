@@ -26,13 +26,13 @@ class DagelijksEvangelie(Card):
                         {% set title = my_encode("Dagelijks Evangelie: " + data['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("Dagelijks Evangelie: " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -44,7 +44,7 @@ class DagelijksEvangelie(Card):
         # load from web
         data = {
             'name': "Dagelijks Evangelie",
-            'image': os.environ['SERVER'] + "/var/evangelizo.png"
+            'image': os.environ['SERVER'] + "/static/evangelizo.png"
         }
         site = "https://publication.evangelizo.ws/NL/days/%s" % time.strftime("%Y-%m-%d")
         harvest = getJSON(site)

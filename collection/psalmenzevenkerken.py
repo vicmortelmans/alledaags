@@ -8,9 +8,7 @@ class PsalmenZevenkerken(Card):
         self._key = "psalmenzevenkerken"
         self._category = "bible video"
         self._type = "sequence"
-        self._data = {
-            'index': "https://www.bijbelhuiszevenkerken.be/blog/2010/01/01/waken-met-de-psalmen/"
-        }
+        self._data = { }
         self._template = """
             {% if data %}
             <div class="item" id="psalmenzevenkerken">
@@ -26,22 +24,19 @@ class PsalmenZevenkerken(Card):
                         <a target="_blank" onclick="load_card('psalmenzevenkerken');">
                             <div class="action-button"></div>
                         </a>
-                        <a target="_blank" href="{{data['index']}}">
-                            <div class="button">INHOUD</div>
-                        </a>
                     </div>
                     <div class="actions">
                         {% set url = my_encode(item['url']) %}
                         {% set title = my_encode("Waken met de psalmen: " + item['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("Waken met de psalmen: " + item['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -63,5 +58,5 @@ class PsalmenZevenkerken(Card):
                 'name': "Waken met de psalmen",
                 'title': item['titel'],
                 'url': item['url'],
-                'image': "https://alledaags.gelovenleren.net/var/psalmenboek.png",
+                'image': os.environ['SERVER'] + "/static/psalmenboek.png",
                 })

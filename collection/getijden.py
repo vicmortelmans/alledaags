@@ -1,6 +1,7 @@
 from collection.source import Card
 from datetime import date, datetime, time
 from babel.dates import format_date, format_datetime, format_time
+import os
 
 
 class Getijden(Card):
@@ -26,7 +27,7 @@ class Getijden(Card):
     def harvestSync(self):
         data = {
             'name': "Getijdengebed",
-            'image': "https://alledaags.gelovenleren.net/var/getijdengebed.png",
+            'image': os.environ['SERVER'] + "/static/getijdengebed.png",
             'url': "https://www.tiltenberg.org/getijdengebed"
         }
         now = datetime.now()

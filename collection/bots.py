@@ -31,13 +31,13 @@ class Bots(Card):
                         {% set title = my_encode("Luistert naar Hem: " + data['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("Luistert naar Hem: " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                     </div>
                 </div>
@@ -48,12 +48,12 @@ class Bots(Card):
     def harvestSync(self):
         date = time.strftime("%Y-%m-%d")
         site = "https://api.luistertnaarhem.nl/?mode=meditatieVoorDatum"
-        harvest = getJsonPathPOST(site, json.dumps({"datum": date, "taal": 1, "appVersion": "4"}), None, None, headers={"Content-Type": "application/json"})
+        harvest = getJsonPathPOST(site, json.dumps({"datum": date, "taal": 1, "appVersion": "4"}).encode('ascii'), None, None, headers={"Content-Type": "application/json"})
         # without 'json.dumps' and headers, the code works on development server but not on GAE;
         # here's where this fix was disclosed: https://github.com/eve-val/evelink/issues/203#issuecomment-276102726
         data = {
             'name': "Luistert naar Hem",
-            'image': os.environ['SERVER'] + "/var/luistert-naar-hem-bots.png",
+            'image': os.environ['SERVER'] + "/static/luistert-naar-hem-bots.png",
             'key': self._key
         }
         try:

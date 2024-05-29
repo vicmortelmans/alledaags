@@ -33,13 +33,13 @@ class Schatkamer2(Card):
                         {% set title = my_encode("De Schatkamer: " + item['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode("De Schatkamer: " + item['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -59,7 +59,7 @@ class Schatkamer2(Card):
             self._data['items'] = [
                 {
                     'name': "De Schatkamer",
-                    'image': "/var/schatkamer.jpg",
+                    'image': "/static/schatkamer.jpg",
                     'title': item['snippet']['title'],
                     'video': "https://www.youtube.com/embed/" + item['contentDetails']['videoId'],
                     'url': "https://www.youtube.com/watch?v=" + item['contentDetails']['videoId']
@@ -72,7 +72,7 @@ class Schatkamer2(Card):
                 self._data['items'] += [
                     {
                         'name': "De Schatkamer",
-                        'image': "/var/schatkamer.jpg",
+                        'image': "/static/schatkamer.jpg",
                         'title': item['snippet']['title'],
                         'video': "https://www.youtube.com/embed/" + item['contentDetails']['videoId'],
                         'url': "https://www.youtube.com/watch?v=" + item['contentDetails']['videoId']

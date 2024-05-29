@@ -55,7 +55,7 @@ class RadioMariaVlaanderenRadio(Radio):
         data = {
             'name': "Radio Maria Vlaanderen",
             'title': "Live radio",
-            'image': os.environ['SERVER'] + "/var/vatican.jpg",
+            'image': os.environ['SERVER'] + "/static/vatican.jpg",
             'image-width': '304',
             'image-height': '104',
             'url': "https://www.radiomaria.be/",

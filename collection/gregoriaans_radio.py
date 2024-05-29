@@ -53,7 +53,7 @@ class GregoriaansRadio(Radio):
         data = {
             'name': "Gregoriaans",
             'title': "Muziekradio",
-            'image': os.environ['SERVER'] + "/var/concertzender.jpg",
+            'image': os.environ['SERVER'] + "/static/concertzender.jpg",
             'image-width': '304',
             'image-height': '214',
             'url': "https://www.concertzender.nl/",

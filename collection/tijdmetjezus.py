@@ -1,5 +1,6 @@
 from collection.data import *
 from collection.source import Card
+import os
 
 
 class TijdMetJezus(Card):
@@ -32,7 +33,7 @@ class TijdMetJezus(Card):
         harvest = getHtml(site, xpath)
         data = {
             'name': "Tijd met Jezus",
-            'image': "https://alledaags.gelovenleren.net/var/tijd-met-jezus.png"
+            'image': os.environ['SERVER'] + "/static/tijd-met-jezus.png"
         }
         try:
             data['title'] = get_only_content_from_element(harvest['div'][1])

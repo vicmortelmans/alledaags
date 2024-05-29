@@ -53,7 +53,7 @@ class KoningsoordRadio(Radio):
         data = {
             'name': "Abdij Koningsoord",
             'title': "Live getijden",
-            'image': os.environ['SERVER'] + "/var/koningsoord.jpg",
+            'image': os.environ['SERVER'] + "/static/koningsoord.jpg",
             'image-width': '304',
             'image-height': '152',
             'url': "https://abdijkoningsoord.org/ons-gebed/getijden/",

@@ -65,7 +65,7 @@ class RadioVaticanRadio(Radio):
         data = {
             'name': "Radio Vaticaan",
             'title': "Kanaal 1",
-            'image': os.environ['SERVER'] + "/var/radiovatican.png",
+            'image': os.environ['SERVER'] + "/static/radiovatican.png",
             'image-width': '250',
             'image-height': '147',
             'url': "http://www.radiovaticana.va/en3/diretta.asp",

@@ -33,13 +33,13 @@ class Meesters(Card):
                         {% set title = my_encode(item['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode(item['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                         <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -53,7 +53,7 @@ class Meesters(Card):
                     'title': a['content'],
                     'name': "Naar het hart van je leven",
                     'url': a['href'],
-                    'image': "/var/meesters.png"
+                    'image': "/static/meesters.png"
                 }
                 for a in [
                     {'content': "Ignatius van Loyola", 'href': "https://leren.kerknet.be/meesters-2/index.html#/lessons/AfebjQ1tS0KJ2NFV3J4mtU8E78I3n7LL"},

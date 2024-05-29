@@ -32,16 +32,16 @@ class AtotZ(Card):
                         {% set short_title = my_encode("Bijbel van A tot Z: " + item['title']) %}
                         {% set image = my_encode(item['image']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
-                            <div class="icon"><img src="/var/facebook-box.png"/></div>
+                            <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://twitter.com/intent/tweet?url={{historical_url}}&text={{short_title}}">
-                            <div class="icon"><img src="/var/twitter-box.png"/></div>
+                            <div class="icon"><img src="/static/twitter-box.png"/></div>
                         </a>
                         <a target="_blank" href="https://pinterest.com/pin/create/bookmarklet/?media={{image}}&url={{url}}&is_video=false&description={{title}}">
-                            <div class="icon"><img src="/var/pinterest.png"/></div>
+                            <div class="icon"><img src="/static/pinterest.png"/></div>
                         </a>
                          <a target="_blank" href="{{link_url}}">
-                            <div class="icon"><img src="/var/link.png"/></div>
+                            <div class="icon"><img src="/static/link.png"/></div>
                         </a>
                    </div>
                 </div>
@@ -72,7 +72,7 @@ class AtotZ(Card):
                         title = "AtotZ: init error"
                         message = "Some td without image found on %s (%s)" % (site, str(e))
                         logging.error(title + " : " + message)
-                        item['image'] = '/var/atotz.jpg'
+                        item['image'] = '/static/atotz.jpg'
                 else:
                     # even td's have a link
                     try:
@@ -111,7 +111,7 @@ class AtotZ(Card):
                     title = "AtotZ: init error"
                     message = "Some td without image found on %s (%s)" % (site, str(e))
                     logging.error(title + " : " + message)
-                    item['image'] = '/var/atotz.jpg'
+                    item['image'] = '/static/atotz.jpg'
             else:
                 # even td's have a link
                 try:

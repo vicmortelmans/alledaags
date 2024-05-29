@@ -26,7 +26,7 @@ from collection import preken
 from collection import gedichten
 from collection import atotz
 from collection import compendium
-from collection import nieuwe_franciscus
+#from collection import nieuwe_franciscus  # new page on otheo has paywall and no RSS https://www.otheo.be/auteur/paus-franciscus
 from collection import prentencatechismus
 from collection import bots
 from collection import ewtn
