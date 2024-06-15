@@ -71,7 +71,7 @@ class Kerkvaders(Card):
             data['title'] = harvest_title['a']['content']
             data['image'] = harvest_image['img']['src']
             site = data['url']
-            xpath = "//div/@data-source-file"
+            xpath = "//audio/source/@src"
             harvest = getHtml(site, xpath)
             data['mp3'] = harvest
             data['id'] = site

@@ -16,6 +16,9 @@
 				"type": "dev",
 				"closeIdleConnection": true,
 				"auth-model": "native"
+			},
+			"custom-properties": {
+				"valueManager.alledaags.cache:json": "plaintext"
 			}
 		}
 	},

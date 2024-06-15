@@ -18,7 +18,7 @@
 				"auth-model": "native"
 			},
 			"custom-properties": {
-				"valueManager.alledaags.cache:json": "plaintext"
+				"valueManager.alledaags.cache:json": "json"
 			}
 		}
 	},
