@@ -40,23 +40,22 @@ class DominicanenPreek(Card):
 
     def harvestSync(self):
         # load from feed
-        feed = "https://dominicanen.be/nl/preekvandeweek?format=feed&type=rss"
-        harvest = getRSS(feed)
+        site = "https://www.dominicanen.org/nl/preek-van-de-week"
+        xpath = "//article"
+        harvest = getHtml(site, xpath, tree_requested=True)
         data = {
             'name': "Dominicanen Preek van de Week",
             'key': self._key
         }
         try:
-            item = harvest['item'][0]
-            data['title'] = item['title']
-            data['url'] = item['link']
+            item = harvest[0]
+            data['title'] = item.find('.//h2').text
+            data['url'] = "https://www.dominicanen.org" + item.find('.//a').get('href')
             data['id'] = data['url']
-            xpath = "(//article//img)[1]/@src"
-            harvest = getHtml(data['url'], xpath)
-            data['image'] = "https://dominicanen.be" + harvest
+            data['image'] = "https://www.dominicanen.org" + item.find('.//img').get('src')
         except (TypeError, KeyError, IndexError) as e:
-            title = "ZwartePeper: sync error"
-            message = "No complete data found on %s (%s)" % (feed, str(e))
+            title = "Dominicanenpreek: sync error"
+            message = "No complete data found on %s (%s)" % (site, str(e))
             logging.error(title + " : " + message)
             report_error_by_mail(title, message)
             self._data = {}

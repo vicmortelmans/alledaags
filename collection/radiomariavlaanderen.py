@@ -43,7 +43,7 @@ class RadioMariaVlaanderen(Card):
                             //        $('#item-radiomariavlaanderen').hide();
                             //    }
                             //    $('#container').masonry('layout');
-                            });
+                            //});
                         });
                         //@ sourceURL={{data['key']}}.js
                         </script>

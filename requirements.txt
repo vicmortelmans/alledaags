@@ -17,8 +17,10 @@ mariadb==1.1.10
 MarkupSafe==2.1.5
 packaging==24.0
 pycharm-debug===debug
+python-slugify==8.0.4
 soupsieve==2.5
 SQLAlchemy==2.0.29
+text-unidecode==1.3
 typing_extensions==4.11.0
 urlfetch==2.0.1
 Werkzeug==3.0.2

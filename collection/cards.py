@@ -51,24 +51,25 @@ from collection import eerstecommunie
 from collection import kenteringen
 from collection import radiomariavlaanderen  # still on http
 from collection import missaleeo
-from collection import mechelsecatechismus
+#from collection import mechelsecatechismus
+from collection import mechelsecatechismus2
 from collection import trente
 from collection import middelbaar
 from collection import innerlijkleven
 #from collection import zingtjubilate  #abandoned implementation half way
 from collection import zuidinga
-from collection import dominicanenradio
+#from collection import dominicanenradio  #seems to  have gone
 from collection import dominicanenpreek
 from collection import abc_thomas
 from collection import navolging
 from collection import levenmetignatius
 #from collection import avondwoordjes
-from collection import avondwoordjes2
+#from collection import avondwoordjes2  #seems to have gone
 #from collection import sprekenmetgod
 from collection import kwartetten
 from collection import gebedenboek
 from collection import tijdmetjezus
-from collection import hanssmits
+#from collection import hanssmits  #seems to have gone
 from collection import taize
 from collection import sporen
 from collection import orthodox
