@@ -44,7 +44,7 @@ class Lourdes(Card):
             'name': "Lourdes",
             'title': "Livestream",
             'image': os.environ['SERVER'] + "/static/dove1.png",
-            'url' : "https://www.youtube.com/embed/live_stream?channel=UC7zlbnNCnuAPiC3goKcFgUg&amp;rel=0"
+            'url' : "https://www.youtube.com/embed/2Xn1Bb697A0?si=qKSXfG2J3FfWvCEW"
         }  # title and image are required for the sharing concept to work
         self._data.update(data)
 

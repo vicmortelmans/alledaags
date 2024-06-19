@@ -75,14 +75,14 @@ from collection import sporen
 from collection import orthodox
 from collection import summa
 from collection import holyhome
-from collection import eerherstel
+#from collection import eerherstel  #not updated since sep 2023
 from collection import positief
 from collection import psalmen
 from collection import getijden
 from collection import koningsoord
 #from collection import zustermarianne
 from collection import zwartepeper
-from collection import huissen
+#from collection import huissen  #not updated since nov 2023
 from collection import hagen
 from collection import geudens
 from collection import adoration
