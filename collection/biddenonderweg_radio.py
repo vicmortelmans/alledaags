@@ -39,7 +39,7 @@ class BiddenOnderwegRadio(Radio):
         """
 
     def harvestSync(self):
-        self._data = cards.find_card("biddenonderweg").data
+        self._data = collection.cards.find_card("biddenonderweg").data
         if self._data:
             self._data['key'] = self._key
 

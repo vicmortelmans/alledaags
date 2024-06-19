@@ -51,41 +51,46 @@ class Holyhome(Card):
     def harvestInit(self):
         self._data['items'] = []
         site1 = "https://www.holyhome.nl/missaal.html"
-        xpath1 = "//div[contains(@class,'col1')]//a[contains(@href,'hwc')][not(contains(@href,'154'))]"
-        harvest1 = getHtml(site1, xpath1)
+        xpath1 = "//table//a"
+        harvest1 = getHtml(site1, xpath1, tree_requested=True)
         site2 = "https://www.holyhome.nl/lunenburg_start.html"
-        xpath2 = "//div[contains(@class,'col1')]//td"
-        harvest2 = getHtml(site2, xpath2)
+        xpath2 = "//table//a"
+        harvest2 = getHtml(site2, xpath2, tree_requested=True)
         try:
-            for a in harvest1['a']:
-                site = a['href']
-                xpath1b = "//big[img[contains(@src,'houtsnedes')]]"
+            '''
+            for a in harvest1:
+                site = a.get('href')
+                xpath1b = "(//big[img[contains(@src,'houtsnedes')]])[1]"
                 harvest1b = getHtml(site, xpath1b)
-                self._data['items'] += [
-                    {
-                        'name': "Holyhome.nl",
-                        'title': a['content'] if a['content'] else a['span']['content'],
-                        'image': harvest1b['big']['img']['src'],
-                        'url': site,
-                        'index': site1
-                    }
-                ]
-            for i, td in enumerate(harvest2['td']):
-                if 'a' in td:
-                    site = td['a']['href']
-                    xpath = "//img[contains(@src,'Prentenboek-big')]"
-                    harvest = getHtml(site, xpath)
+                if harvest1b:
                     self._data['items'] += [
                         {
                             'name': "Holyhome.nl",
-                            'title': harvest2['td'][i+4]['content'],
-                            'image': harvest['img']['src'],
+                            'title': ''.join(a.itertext()),
+                            'image': harvest1b['big']['img']['src'],
+                            'url': site,
+                            'index': site1
+                        }
+                    ]
+            '''
+            for a in harvest2:
+                site = a.get('href')
+                if 'bpl' in site:
+                    xpath2b = "(//div[contains(@class,'innertube')]/div/div/p/img)[1]"
+                    harvest2b = getHtml(site, xpath2b)
+                    xpath2c = "//h2[contains(.,'Prentenboek')]"
+                    harvest2c = getHtml(site, xpath2c, tree_requested=True)
+                    self._data['items'] += [
+                        {
+                            'name': "Holyhome.nl",
+                            'title': harvest2c[0].text,
+                            'image': harvest2b['img']['src'],
                             'url': site,
                             'index': site2
                         }
                     ]
         except (TypeError, KeyError, IndexError) as e:
             title = "Holyhome: init error"
-            message = "No data found on %s (%s)" % (site, str(e))
+            message = "No data found on %s (%s)" % (site1, str(e))
             logging.error(title + " : " + message)
             report_error_by_mail(title, message)

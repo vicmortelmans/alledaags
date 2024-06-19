@@ -1,3 +1,4 @@
+import API_keys
 from collection.data import *
 from collection.source import Card
 
@@ -48,7 +49,7 @@ class Psalmen(Card):
 
     def harvestInit(self):
         # load from feed
-        site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6452647DF97A3EDC&maxResults=25&part=snippet%2CcontentDetails&key=AIzaSyBClmJxCBMvWS1lyrrPAdruiefymwnb-04"
+        site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6452647DF97A3EDC&maxResults=25&part=snippet%2CcontentDetails&key=" + API_keys.YOUTUBE
         harvest = getJSON(site)
         self._data = {
             'index': "https://www.youtube.com/playlist?list=PL6452647DF97A3EDC",
@@ -66,7 +67,7 @@ class Psalmen(Card):
                 for item in harvest['items']
             ]
             while 'nextPageToken' in harvest:
-                site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6452647DF97A3EDC&maxResults=25&part=snippet%2CcontentDetails&key=AIzaSyBClmJxCBMvWS1lyrrPAdruiefymwnb-04&pageToken=" + harvest['nextPageToken'] + "&key=AIzaSyDM32pGS7UnaYy1_7czui7eGa_HYb56R7s"
+                site = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6452647DF97A3EDC&maxResults=25&part=snippet%2CcontentDetails&key=" + API_keys.YOUTUBE + "&pageToken=" + harvest['nextPageToken'] + "&key=AIzaSyDM32pGS7UnaYy1_7czui7eGa_HYb56R7s" + API_keys.YOUTUBE
                 harvest = getJSON(site)
                 self._data['items'] += [
                     {

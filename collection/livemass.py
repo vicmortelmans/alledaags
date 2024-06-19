@@ -24,6 +24,21 @@ class Livemass(Card):
                             player.play();
                         </script>
                     </div>
+                    <div class="filled-image" id="livemass-player">
+                        <script src="https://content.jwplatform.com/libraries/9KOdgUzC.js">
+                        <script type='text/javascript'>
+                        jwplayer("myElement").setup({
+                            "height": 540,
+                            "width": 960,
+                            "title":"Live",
+                            "sources": [{
+                              "file": "http://34.232.8.78:1935/live/live/playlist.m3u8",
+                          
+                          }]
+
+                        }); 
+                        </script>
+                    </div>
                     <a target="_blank" href="{{data['url']}}">
                         <div class="title">{{data['name']}}</div>
                         <div class="text">{{data['title']}}</div>
