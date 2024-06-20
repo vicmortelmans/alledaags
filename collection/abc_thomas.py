@@ -50,7 +50,8 @@ class ABC(Card):
         """
 
     def harvestInit(self):
-        site = os.environ['SERVER'] + "/static/abc.html"  # GAE cannot download the index site, gives html timeout
+        #site = os.environ['SERVER'] + "/static/abc.html"  # GAE cannot download the index site, gives html timeout
+        site = "https://www.kuleuven.be/thomas/page/volwassenencatechese-abc/"
         xpath = "//div[@id='abc']//p/a"
         harvest = getHtml(site, xpath, no_headers=True)
         try:

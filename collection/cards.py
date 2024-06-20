@@ -37,7 +37,7 @@ from collection import voorleesbijbel2
 from collection import goudenboek
 from collection import beeldmeditatie
 #from collection import kapucijnen  # last entry in 2018
-from collection import youcat
+#from collection import youcat
 from collection import kinderwoorddienst
 from collection import katholieklevenpodcast
 from collection import katholiekleven
