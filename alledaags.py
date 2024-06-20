@@ -40,9 +40,9 @@ def randomizer_random(key):
 def randomizer_dailyFeed():
     return randomizer.dailyFeedHandler(request)
 
-@app.route("/randomcard")
+@app.route("/randomcard/")  # needs the '/' at the end!
 @app.route("/randomcard/<category>")
-def randomizer_randomCard(category):
+def randomizer_randomCard(category=None):
     return randomizer.randomCardHandler(request,category)
 
 @app.route("/")
