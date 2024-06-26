@@ -10,6 +10,7 @@ import model
 from my_encrypting import SECRET, my_encrypt, my_encode
 import os
 import random
+import requests
 import urllib.request, urllib.error, urllib.parse
 from sqlalchemy.exc import NoResultFound
 
@@ -119,16 +120,8 @@ def dailyFeedHandler(request):
                     HCTI_API_ENDPOINT = "https://hcti.io/v1/image"
                     HCTI_API_USER_ID = '168a7c20-2578-4d22-87ac-15aa0e684c2b'
                     data = {'url': stored.url, 'selector': "div.item", 'ms_delay': "1000"}
-                    passman = urllib.request.HTTPPasswordMgrWithDefaultRealm()
-                    passman.add_password(None, HCTI_API_ENDPOINT, HCTI_API_USER_ID, API_keys.HCTI_API_KEY)
-                    authhandler = urllib.request.HTTPBasicAuthHandler(passman)
-                    opener = urllib.request.build_opener(authhandler)
-                    urllib.request.install_opener(opener)
-                    req = urllib.request.Request(url=HCTI_API_ENDPOINT, data=data, method='POST')
-                    res = urllib.request.urlopen(HCTI_API_ENDPOINT)
-                    json_data = res.read()
-                    image_data = json.loads(json_data)
-                    stored.image_url = image_data['url']
+                    image = requests.post(url = HCTI_API_ENDPOINT, data = data, auth=(HCTI_API_USER_ID, API_keys.HCTI_API_KEY))
+                    stored.image_url = image.json()['url']
                     if picked['item']:
                         stored.title = "Alledaags Geloven : " + picked['item']['name'] + " - " + picked['item']['title']
                         stored.description = picked['item']['title']
