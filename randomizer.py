@@ -11,6 +11,7 @@ from my_encrypting import SECRET, my_encrypt, my_encode
 import os
 import random
 import urllib.request, urllib.error, urllib.parse
+from sqlalchemy.exc import NoResultFound
 
 
 def randomHandler(request, key=None):
@@ -99,7 +100,10 @@ def dailyFeedHandler(request):
     today = (datetime.now() - timedelta(hours=6)).strftime("%Y-%m-%d")
     # (a new day starts at 06:00)
     logging.info("Querying dailyfeed")
-    stored = model.db.session.execute(model.db.select(model.DailyFeed).filter_by(key="dailyfeed")).scalar_one()
+    try:
+        stored = model.db.session.execute(model.db.select(model.DailyFeed).filter_by(key="dailyfeed")).scalar_one()
+    except NoResultFound as e:
+        stored = model.DailyFeed()
     if not stored.day == today:
         logging.info("It's a new day for dailyfeed: " + today)
         cards_list = cards.find_cards_per_category(None)
