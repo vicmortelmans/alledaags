@@ -19,7 +19,6 @@ class Livemass(Card):
                         jwplayer("myElement").setup({
                             "responsive": true,
                             "width": "100%",
-                            “autostart”: true,
                             "title":"Live",
                             "sources": [{
                               "file": "http://34.232.8.78:1935/live/live/playlist.m3u8",
