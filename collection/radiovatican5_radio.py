@@ -12,8 +12,8 @@ class RadioVatican5Radio(Radio):
             {% if data %}
             <div class="item" id="item-{{data['key']}}">
                 <div class="card prayer">
-                    <div class="padded-image">
-                        <img src="{{data['image']}}" width="{{data['image-width']}}" height="{{data['image-height']}}""/>
+                    <div class="filled-image">
+                        <img src="{{data['image']}}"/>
                     </div>
                     <div class="title">{{data['name']}}</div>
                     <div class="text" id="title-{{data['key']}}">{{data['title']}}</div>
