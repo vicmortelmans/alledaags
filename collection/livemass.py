@@ -21,7 +21,7 @@ class Livemass(Card):
                             "width": "100%",
                             "title":"Live",
                             "sources": [{
-                              "file": "https://34.232.8.78:1935/live/live/playlist.m3u8",
+                              "file": "http://34.232.8.78:1935/live/live/playlist.m3u8",
                           
                           }]
 
