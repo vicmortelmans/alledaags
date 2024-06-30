@@ -63,13 +63,11 @@ class RadioVatican5Radio(Radio):
 
     def harvestInit(self):
         data = {
-            'name': "Radio Vaticaan",
-            'title': "Kanaal 5",
-            'image': os.environ['SERVER'] + "/static/radiovatican.png",
-            'image-width': '250',
-            'image-height': '147',
-            'url': "http://www.radiovaticana.va/en3/diretta.asp",
-            'mp3': "http://live.vaticanwebradio.org/channel5.mp3",
+            'name': "Radio Vaticana",
+            'title': "Frans",
+            'image': "https://www.vaticannews.va/etc/designs/vatican-news/release/library/main/images/rv/rv-esteso-bianco-small.png",
+            'url': "https://www.vaticannews.va/fr/epg.html#onair",
+            'mp3': "https://radio.vaticannews.va/stream-fr",
             'key': self._key
         }
         self._data.update(data)
