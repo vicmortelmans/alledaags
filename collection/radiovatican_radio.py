@@ -12,8 +12,8 @@ class RadioVaticanRadio(Radio):
             {% if data %}
             <div class="item" id="item-{{data['key']}}">
                 <div class="card prayer">
-                    <div class="padded-image">
-                        <img src="{{data['image']}}" width="{{data['image-width']}}" height="{{data['image-height']}}""/>
+                    <div class="filled-image">
+                        <img src="{{data['image']}}"/>
                     </div>
                     <div class="title">{{data['name']}}</div>
                     <div class="text" id="title-{{data['key']}}">{{data['title']}}</div>
@@ -63,13 +63,11 @@ class RadioVaticanRadio(Radio):
 
     def harvestInit(self):
         data = {
-            'name': "Radio Vaticaan",
-            'title': "Kanaal 1",
-            'image': os.environ['SERVER'] + "/static/radiovatican.png",
-            'image-width': '250',
-            'image-height': '147',
-            'url': "http://www.radiovaticana.va/en3/diretta.asp",
-            'mp3': "http://live.vaticanwebradio.org/channel1.mp3",
+            'name': "Radio Vaticana",
+            'title': "Engels",
+            'image': "https://www.vaticannews.va/etc/designs/vatican-news/release/library/main/images/rv/rv-esteso-bianco-small.png",
+            'url': "https://www.vaticannews.va/en/epg.html#onair",
+            'mp3': "https://radio.vaticannews.va/stream-en",
             'key': self._key
         }
         self._data.update(data)
