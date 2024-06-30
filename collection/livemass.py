@@ -20,8 +20,9 @@ class Livemass(Card):
                             "responsive": true,
                             "width": "100%",
                             "title":"Live",
+                            "autostart": true,
                             "sources": [{
-                              "file": "http://34.232.8.78:1935/live/live/playlist.m3u8",
+                              "file": "https://34.232.8.78:1935/live/live/playlist.m3u8",
                           
                           }]
 
