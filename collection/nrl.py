@@ -65,6 +65,13 @@ class Nrl(Card):
             if harvest:
                 break
             current_date_time += datetime.timedelta(days=1)
+        else:
+            title = "Nrl: sync error"
+            message = "No date within 10 days from now found on %s" % site
+            logging.error(title + " : " + message)
+            report_error_by_mail(title, message)
+            self._data = {}
+            return
         data = {
             'name': "Liturgische Catechese",
             'index': "https://rkliturgie.nl/liturgie/liturgische-catechese",

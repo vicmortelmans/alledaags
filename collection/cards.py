@@ -24,7 +24,7 @@ from collection import leesrooster2
 from collection import nrl
 from collection import preken
 from collection import gedichten
-from collection import atotz
+from collection import atotz_otheo
 from collection import compendium
 #from collection import nieuwe_franciscus  # new page on otheo has paywall and no RSS https://www.otheo.be/auteur/paus-franciscus
 from collection import otheo_franciscus

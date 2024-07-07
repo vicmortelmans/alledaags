@@ -142,9 +142,9 @@ def getHtml(url, xpath, no_headers=False, xml_requested=False, tree_requested=Fa
                     'Accept-Language': 'en-US,en;q=0.8',
                     'Connection': 'keep-alive'
                 }
-                request = urllib.request.Request(url, headers=hdr)
+                request = urllib.request.Request(urllib.parse.quote(url,safe='/:?=&'), headers=hdr)
             else:
-                request = urllib.request.Request(url)
+                request = urllib.request.Request(urllib.parse.quote(url,safe='/:?=&'))
             htmlstring = urllib.request.urlopen(request).read()
             htmlstring = htmlstring.decode(chardet.detect(htmlstring)['encoding'], errors="ignore").encode('utf-8')
             utf8parser = etree.HTMLParser(encoding="utf-8", remove_comments=True)

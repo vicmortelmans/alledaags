@@ -71,5 +71,3 @@ class Seconden(Card):
             self._data = {}
         else:
             self._data.update(data)
-
-

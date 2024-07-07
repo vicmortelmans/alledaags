@@ -58,12 +58,13 @@ class Heiligen(Card):
 
     def harvestSync(self):
         # load from web
-        url = "http://heiligen.net/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
+        #url = "http://heiligen.net/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
+        url = "http://heiligen-3s.nl/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
         xpath = "(//div[@id='inhoud']//table)[1]//td[2]/a"
         harvest = getHtml(url, xpath)
         items = []
         for a in harvest['a']:
-            item_url = "http://heiligen.net" + a['href']
+            item_url = "http://heiligen-3s.nl" + a['href']
             try:
                 html_string = urllib.request.urlopen(item_url).read()
                 # html isn't pretty, so using beautifulsoup for parsing i.o. ElementTree
@@ -100,13 +101,13 @@ class Heiligen(Card):
         else:
             try:
                 data['url'] = site
-                data['index'] = "https://heiligen.net/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
+                data['index'] = "https://heiligen-3s.nl/heiligen_dag.php?MD=%s" % time.strftime("%m%d")
                 data['title'] = harvest1['div']['content']
                 try:
-                    data['image'] = "https://heiligen.net" + harvest2['img'][1]['src']
+                    data['image'] = "https://heiligen-3s.nl" + harvest2['img'][1]['src']
                 except (TypeError, KeyError, IndexError):
                     logging.warning("No image found on %s." % site)
-                    data['image'] = "https://heiligen.net/images/allerh.jpg"
+                    data['image'] = "https://heiligen-3s.nl/images/allerh.jpg"
             except (TypeError, KeyError, IndexError):
                 logging.error("No data found on %s." % site)
             else:
