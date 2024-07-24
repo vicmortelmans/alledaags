@@ -74,9 +74,11 @@ def yql_bibleTest():
 def yql_yqlPlaylistLatest():
     return yql.yqlPlaylistLatestHandler(request)
 
+'''
 @app.route("/lectionarium")
 def lectionarium_lectionarium():
     return lectionarium.lectionariumHandler(request)
+'''
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='80', debug=True)
