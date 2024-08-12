@@ -134,7 +134,8 @@ def dailyFeedHandler(request):
                 else:
                     stored.day = today
                     stored.pubDate = current_time.strftime("%a, %d %b %Y %H:%M:%S +0000")
-                    logging.info("Commiting database")
+                    logging.info("Committing database")
+                    model.db.session.merge(stored)
                     model.db.session.commit()
                     break
         else:
