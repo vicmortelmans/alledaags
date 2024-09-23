@@ -105,6 +105,7 @@ def dailyFeedHandler(request):
         stored = model.db.session.execute(model.db.select(model.DailyFeed).filter_by(key="dailyfeed")).scalar_one()
     except NoResultFound as e:
         stored = model.DailyFeed()
+        stored.key = "dailyfeed"
     if not stored.day == today:
         logging.info("It's a new day for dailyfeed: " + today)
         cards_list = cards.find_cards_per_category(None)
