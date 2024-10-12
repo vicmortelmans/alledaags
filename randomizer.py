@@ -98,8 +98,8 @@ def randomCardHandler(request, category=None):
 def dailyFeedHandler(request):
     logging.info("Rendering daily feed.")
     current_time = datetime.now()
-    today = (datetime.now() - timedelta(hours=6)).strftime("%Y-%m-%d")
-    # (a new day starts at 06:00)
+    today = (datetime.now() - timedelta(hours=5)).strftime("%Y-%m-%d")
+    # (a new day starts at 05:00)
     logging.info("Querying dailyfeed")
     try:
         stored = model.db.session.execute(model.db.select(model.DailyFeed).filter_by(key="dailyfeed")).scalar_one()
