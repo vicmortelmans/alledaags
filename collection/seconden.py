@@ -46,23 +46,34 @@ class Seconden(Card):
 
     def harvestSync(self):
         # load from web
-        site = "https://bijbelin1000seconden.be/menu/tiki-index.php"
-        xpath = "//p[strong]"
-        harvest = getHtml(site, xpath, tree_requested=True)
+        maanden = [
+            "JANUARI", "FEBRUARI", "MAART", "APRIL", "MEI", "JUNI",
+            "JULI", "AUGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DECEMBER"
+        ]
+        nu = datetime.datetime.now()
+        maandnaam = maanden[nu.month - 1]  # Maanden zijn 1-gebaseerd
+        kalender = f"https://bijbelin1000seconden.be/menu/tiki-index.php?page={maandnaam}+{nu.year}"
+        xpath = "//table[1]"
+        harvest = getHtml(kalender, xpath, tree_requested=True)
         data = {
             'name': "Bijbel in 1000 seconden",
             'image': os.environ['SERVER'] + "/static/seconden.png",
         }
         try:
-            data['url'] = "https://bijbelin1000seconden.be/menu/" + harvest[0].find('a').get('href')
-            data['title'] = ''.join(harvest[0].find('a').itertext())
-            data['date'] = harvest[0].find('strong').text
-            # now see if we can fetch an image
-            site = data['url']
-            xpath = "(//div[@id = 'page-data']//img)[1]"
-            harvest = getHtml(site, xpath)
-            if 'img' in harvest:
-                data['image'] = "https://bijbelin1000seconden.be/menu/" + harvest['img']['src']
+            rows = harvest[0].findall('tr')
+            dag = nu.strftime('%d')
+            datum = nu.strftime('%d-%m-%Y')
+            for row in rows:
+                if row.findtext('td[2]') == dag:
+                    data['url'] = "https://bijbelin1000seconden.be/menu/" + row.find('.//a').get('href')
+                    data['title'] = ''.join(row.find('.//a').itertext())
+                    data['date'] = datum
+                    # now see if we can fetch an image
+                    site = data['url']
+                    xpath = "(//div[@id = 'page-data']//img)[1]"
+                    harvest = getHtml(site, xpath)
+                    if 'img' in harvest:
+                        data['image'] = "https://bijbelin1000seconden.be/menu/" + harvest['img']['src']
         except (TypeError, KeyError, IndexError) as e:
             title = "Seconden: sync error"
             message = "No data found on %s (%s)" % (site, str(e))

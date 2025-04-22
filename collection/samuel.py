@@ -1,5 +1,6 @@
 from collection.data import *
 from collection.source import Card
+from datetime import datetime, timedelta
 
 
 class Samuel(Card):
@@ -43,27 +44,53 @@ class Samuel(Card):
             {% endif %}
         """
 
+    def komende_zeven_dagen(self):
+        # Nederlandse maandnamen
+        maanden = [
+            "januari", "februari", "maart", "april", "mei", "juni",
+            "juli", "augustus", "september", "oktober", "november", "december"
+        ]
+
+        vandaag = datetime.now()
+        komende_zeven_dagen = []
+
+        for i in range(7):
+            dag = vandaag + timedelta(days=i)
+            datum_str = f"{dag.day} {maanden[dag.month - 1]}"
+            komende_zeven_dagen.append(datum_str)
+        return komende_zeven_dagen
+    
+
     def harvestSync(self):
         # load from web
         site = "https://www.samueladvies.nl/advies-materiaal/komende-zondagen/"
-        xpath = "(//div[contains(@class,'zondag-grid-item')])[1]"
-        harvest = getHtml(site, xpath)
+        xpath = "//div[contains(@class,'zondag-grid-item')]"
+        harvest = getHtml(site, xpath, tree_requested=True)
         data = {
             'name': "Samuel Advies",
             'index': "https://www.samueladvies.nl/advies-materiaal/komende-zondagen/"
         }
         try:
-            data['title'] = harvest['div']['h3']['a']['content']
-            data['image'] = harvest['div']['div']['a']['img']['src']
-            data['url'] = harvest['div']['h3']['a']['href']
-            data['id'] = data['url']
+            kzd = self.komende_zeven_dagen()
+            for div in harvest:
+                title = div.find('h3').xpath("string()")
+                if any(dag in title for dag in kzd):
+                    data['title'] = title
+                    data['image'] = div.find('.//img').get('src')
+                    data['url'] = div.find('.//a').get('href')
+                    data['id'] = data['url']
+                    self._data.update(data)
+                    return
+            else:
+                title = "Samuel: sync error"
+                message = "No matching date found on %s" % (site)
+                logging.error(title + " : " + message)
+                report_error_by_mail(title, message)
+                self._data = {}
+                return
         except (TypeError, KeyError, IndexError) as e:
             title = "Samuel: sync error"
             message = "No complete data found on %s (%s)" % (site, str(e))
             logging.error(title + " : " + message)
             report_error_by_mail(title, message)
             self._data = {}
-        else:
-            self._data.update(data)
-
-

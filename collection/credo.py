@@ -2,30 +2,37 @@ from collection.data import *
 from collection.source import Card
 
 
-class OtheoFranciscus(Card):
+class Credo(Card):
     def __init__(self):
-        self._key = "otheo_franciscus"
-        self._category = "contemplation"
+        self._key = "credo"
+        self._category = "contemplation video"
         self._type = "blog"
         self._data = {}
         self._template = """
             {% if data %}
             <div class="item{% if oldNews %} oldNews{% endif %}">
-                <div class="card contemplation">
+                <div class="card contemplation video">
                     <a target="_blank" href="{{data['url']}}" onclick="document.cookie='{{data['key']}}={{data['url']}}; expires=Fri, 31 Dec 9999 23:59:59 GMT;'">
                         <div class="filled-image">
-                            <div style="  position: relative; display: inline-block; overflow: hidden;">
-                                <img src="{{data['image']}}"/>
-                                <div style="  position: absolute; top: 100px; right: -20px; width: 200px; height: 20px; background-color: black; transform: rotate(45deg); transform-origin: top right; z-index: 2; box-shadow: 0 0 4px rgba(0,0,0,0.5);"></div>
-                            </div>
+                            <iframe width="304" height="171" src="https://www.youtube.com/embed/{{data['videoid']}}?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                         </div>
                         <div class="title">{{data['name']}}</div>
                         <div class="text">{{data['title']}}</div>
                     </a>
                     <div class="actions">
+                        <a target="_blank" href="{{data['instagram']}}">
+                            <div class="button">INSTAGRAM</div>
+                        </a>
+                    </div>
+                    <div class="actions">
+                        <a target="_blank" href="{{data['channel']}}">
+                            <div class="button">HISTORIEK</div>
+                        </a>
+                    </div>
+                    <div class="actions">
                         {% set url = my_encode(data['url']) %}
-                        {% set title = my_encode("Paus Franciscus: " + data['title'] + ' via alledaags.gelovenleren.net') %}
-                        {% set short_title = my_encode("Paus Franciscus: " + data['title']) %}
+                        {% set title = my_encode(data['name'] + ": " + data['title'] + ' via alledaags.gelovenleren.net') %}
+                        {% set short_title = my_encode(data['name'] + ": " + data['title']) %}
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{historical_url}}&title={{title}}">
                             <div class="icon"><img src="/static/facebook-box.png"/></div>
                         </a>
@@ -43,24 +50,29 @@ class OtheoFranciscus(Card):
 
     def harvestSync(self):
         # load from feed
-        site = "https://www.otheo.be/auteur/paus-franciscus"
-        xpath = "//div[contains(@class,'node__content--article')][.//a[contains(text(),'[catechese]')]]"
-        harvest = getHtml(site, xpath, tree_requested=True)
+        feed = "https://www.youtube.com/feeds/videos.xml?channel_id=UC_0o3hjoVsFBhMV_VkKQVbA"
+        harvest = getAtom(feed)
         data = {
-            'name': "Paus Franciscus",
+            'name': "Credo",
             'key': self._key
         }
         try:
-            item = harvest[0]
-            data['title'] = ''.join(item.find('.//h3').itertext())
-            data['url'] = "https://www.otheo.be" + item.find('.//a').get('href')
+            item = harvest['entry'][0]
+            data['title'] = item['title']
+            data['url'] = item['link']['href']
+            data['videoid'] = item['videoId']
             data['id'] = data['url']
-            data['image'] = "https://www.otheo.be" + item.find('.//noscript/img').get('src')
+            data['image'] = item['group']['thumbnail']['url']
+            data['channel'] = item['author']['uri']
+            data['description'] = item['group']['description']
+            data['instagram'] = "https://www.instagram.com/credokatholiek/"
         except (TypeError, KeyError, IndexError) as e:
-            title = "Otheo Franciscus: sync error"
-            message = "No complete data found on %s (%s)" % (site, str(e))
+            title = "Credo: sync error"
+            message = "No complete data found on %s (%s)" % (feed, str(e))
             logging.error(title + " : " + message)
             report_error_by_mail(title, message)
             self._data = {}
         else:
             self._data.update(data)
+
+

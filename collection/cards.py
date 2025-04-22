@@ -1,10 +1,12 @@
 #from collection import adventskalender
-#from collection import ignatiaansbidden
+from collection import ignatiaansbidden
 from collection import heiligen
 from collection import tweetenmetgod
 #from collection import schatkamer
 from collection import schatkamer2
 from collection import ewtn_mutsaerts
+from collection import credo
+from collection import explorecatholic
 from collection import biddenonderweg
 #from collection import lichtopmijnpad  # lats entry jan 2021
 #from collection import sterketijden  # lats entry jan 2021
@@ -58,6 +60,7 @@ from collection import trente
 from collection import middelbaar
 from collection import innerlijkleven
 #from collection import zingtjubilate  #abandoned implementation half way
+from collection import zingtjubilate2
 from collection import zuidinga
 #from collection import dominicanenradio  #seems to  have gone
 from collection import dominicanenpreek
@@ -73,9 +76,9 @@ from collection import tijdmetjezus
 #from collection import hanssmits  #seems to have gone
 from collection import taize
 from collection import sporen
-from collection import orthodox
+#from collection import orthodox
 from collection import summa
-from collection import holyhome
+#from collection import holyhome
 #from collection import eerherstel  #not updated since sep 2023
 from collection import positief
 from collection import psalmen

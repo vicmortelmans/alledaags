@@ -30,6 +30,11 @@ class TweetenMetGod(Card):
                         </a>
                     </div>
                     <div class="actions">
+                        <a target="_blank" href="{{item['instagram']}}">
+                            <div class="button">INSTAGRAM</div>
+                        </a>
+                    </div>
+                    <div class="actions">
                         {% set url = my_encode(item['url']) %}
                         {% set title = my_encode(item['title'] + ' via alledaags.gelovenleren.net') %}
                         {% set short_title = my_encode(item['title']) %}
@@ -79,6 +84,7 @@ class TweetenMetGod(Card):
                     item['name'] = "Tweeting with God"
                     item['image'] = "https://www.tweetingwithgod.com" + harvest['div']['div']['div'][0]['img']['src']
                     item['section'] = harvest['div']['div']['h1'].strip()
+                    item['instagram'] = "https://www.instagram.com/tweetingwithgod/"
                 except (TypeError, KeyError, IndexError) as e:
                     title = "TweetenMetGod: sync error"
                     message = "No data found on %s (%s)" % (site, str(e))

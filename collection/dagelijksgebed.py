@@ -1,6 +1,6 @@
 from collection.data import *
 from collection.source import Card
-
+import os
 
 class DagelijksGebed(Card):
     def __init__(self):
@@ -26,15 +26,15 @@ class DagelijksGebed(Card):
 
     def harvestSync(self):
         # load from web
-        site = "https://www.gewijderuimte.org/daily-prayer/%s" % time.strftime("%Y-%m-%d")
-        xpath = "//a[contains(@class,'active')]"
-        harvest = getHtml(site, xpath, no_headers=True)
+        site = "https://sacredspace.com/nl/daily-prayer/%s/" % time.strftime("%Y-%m-%d")
+        xpath = "//div[contains(@class,'presence-header')]"
+        harvest = getHtml(site, xpath, no_headers=False, tree_requested=True)
         data = {
             'name': "Dagelijks Gebed",
-            'image': "https://www.sacredspace.ie/profiles/annerprofile/themes/sacredspacetheme/images/icon/logo.png"
+            'image': os.environ['SERVER'] + "/static/dagelijksgebed.png"
         }
         try:
-            data['title'] = harvest['a']['content']
+            data['title'] = ''.join(harvest[0].find('p').itertext()).strip()
             data['url'] = site
         except (TypeError, KeyError, IndexError) as e:
             title = "DagelijksGebed: sync error"

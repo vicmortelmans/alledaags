@@ -46,11 +46,10 @@ class Leesrooster2(Card):
         """
 
     def harvestSync(self):
-        # /!\ this is not working on localhost, with error "Invalid and/or missing SSL certificate for URL"
-        site = "https://rkbijbel.nl/cms/webservice.php?mode=bijbelleesrooster"
+        site = "https://rkbijbel.nl/cms/webservice.php?mode=dagelijkswoord"
         harvest = getJSON(site)
         data = {
-            'name': "KBS Leesrooster",
+            'name': "KBS Dagelijks Woord",
             'image': os.environ['SERVER'] + "/static/kbs.png"
         }
         try:

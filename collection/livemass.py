@@ -17,15 +17,16 @@ class Livemass(Card):
                         <div id='myElement'>Loading the player...</div>
                         <script type='text/javascript'>
                         jwplayer("myElement").setup({
-                            "responsive": true,
-                            "width": "100%",
+                            "height": 171,
+                            "width": 304,
                             "title":"Live",
                             "sources": [{
-                              "file": "http://34.232.8.78:1935/live/live/playlist.m3u8",
+                              "file": "https://livemassstream.net/live/live/playlist.m3u8",
                           
                           }]
 
                         }); 
+
                         </script>
                     </div>
                     <a target="_blank" href="{{data['url']}}">
