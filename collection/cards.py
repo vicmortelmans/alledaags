@@ -1,5 +1,5 @@
 #from collection import adventskalender
-from collection import ignatiaansbidden
+#from collection import ignatiaansbidden
 from collection import heiligen
 from collection import tweetenmetgod
 #from collection import schatkamer
