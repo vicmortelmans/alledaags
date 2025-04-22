@@ -12,7 +12,7 @@ class Kerkvaders(Card):
         }
         self._template = """
             {% if data %}
-            <div class="item{% if oldNews %} oldNews{% endif %}">
+            <div class="item" id="kerkvaders">
                 <div class="card contemplation mp3">
                     <a target="_blank" href="{{item['url']}}" onclick="document.cookie='kerkvaders={{item['url']}}; expires=Fri, 31 Dec 9999 23:59:59 GMT;'">
                         <div class="filled-image">
@@ -22,6 +22,9 @@ class Kerkvaders(Card):
                         <div class="text">{{item['title']}}</div>
                     </a>
                     <div class="actions">
+                        <a target="_blank" onclick="load_card('kerkvaders');">
+                            <div class="action-button"></div>
+                        </a>
                         <a target="_blank" id="play-{{data['key']}}" onclick="document.cookie='{{data['key']}}={{item['url']}}; expires=Fri, 31 Dec 9999 23:59:59 GMT;'">
                             <div class="button play-button">BELUISTEREN</div>
                         </a>

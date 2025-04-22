@@ -17,7 +17,7 @@ class Leesrooster2(Card):
             <div class="item">
                 <div class="card bible">
                     <a target="_blank" href="{{data['url']}}">
-                        <div class="padded-image">
+                        <div class="filled-image">
                             <img src="{{data['image']}}"/>
                         </div>
                         <div class="title">{{data['name']}}</div>
