@@ -15,6 +15,7 @@ from collection import andypenne
 from collection import dagelijksgebed
 from collection import dagelijkseverbinding
 from collection import samuel
+from collection import missaal
 from collection import missale
 from collection import dagelijksbijbelcitaat2
 from collection import lezingenvandedag

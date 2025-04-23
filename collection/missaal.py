@@ -6,8 +6,8 @@ import os
 
 class Missaal(Card):
     def __init__(self):
-        self._key = "getijden"
-        self._category = "prayer"
+        self._key = "missaal"
+        self._category = "lectionary"
         self._type = "daily"
         self._data = { }
         self._template = """
