@@ -65,6 +65,7 @@ class GoudenBoek(Card):
                 item['url'] = feeditem['link']
                 item['id'] = item['url']
                 item['key'] = self._key
+                item['name'] = "Volmaakte Godsvrucht"
                 if 'enclosure' in feeditem:
                     item['image'] = feeditem['enclosure']['url']
                 else:

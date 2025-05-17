@@ -19,12 +19,14 @@ def gridHandler(request, historical):
                 'title': historical_dict['item']['title'],
                 'image': historical_dict['item']['image']
             }
-        else:
+        elif 'data' in historical_dict:
             historical_social_data = {
                 'name': historical_dict['data']['name'],
                 'title': historical_dict['data']['title'],
                 'image': historical_dict['data']['image']
             }
+        else: 
+            return "ERROR: unknown URL"
     template = jinja_environment.get_template('radio.html')
     radio_script = template.render(
         radios_list=[],  # don't want the radios' here, just the <script>

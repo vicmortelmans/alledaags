@@ -63,6 +63,8 @@ class Geudens(Card):
                     if "gravatar" not in c['url']:
                         data['image'] = c['url']
                         break
+            else:
+                data['image'] = "https://bid24uur.wordpress.com/wp-content/uploads/2012/07/bid-24-uur4.jpg"
         except (TypeError, KeyError, IndexError) as e:
             title = "Geudens: sync error"
             message = "No complete data found on %s (%s)" % (feed, str(e))

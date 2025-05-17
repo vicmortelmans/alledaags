@@ -53,6 +53,7 @@ class BeeldMeditatie(Card):
         try:
             data['url'] = harvest['a']['href']
             data['date'] = harvest['a']['p']
+            data['title'] = data['date']
         except (TypeError, KeyError, IndexError) as e:
             title = "Dagelijks Bijbelcitaat: sync error"
             message = "No data found on %s (%s)" % (site, str(e))

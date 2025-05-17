@@ -31,13 +31,17 @@ def my_encrypt(key, clear):
 def my_decrypt(key, enc):
     # key is typically filled in with SECRET declared above
     if len(enc) > 25:  # supporting 'long' URLs
-        dec = []
-        enc = base64.urlsafe_b64decode(enc)
-        for i in range(len(enc)):
-            key_c = key[i % len(key)]
-            dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
-            dec.append(dec_c)
-        clear = "".join(dec)
+        try:
+            dec = []
+            enc = base64.urlsafe_b64decode(enc)
+            for i in range(len(enc)):
+                key_c = key[i % len(key)]
+                dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
+                dec.append(dec_c)
+            clear = "".join(dec)
+        except TypeError as e:
+            logging.error(f"my_decrypt of '{enc}' fails with {e}")
+            return {}
     else:
         logging.info(f"Querying historical for {enc}")
         e = model.db.session.execute(model.db.select(model.Historical).filter_by(hash=enc)).scalar_one()
