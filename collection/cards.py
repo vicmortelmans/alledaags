@@ -30,7 +30,8 @@ from collection import gedichten
 from collection import atotz_otheo
 from collection import compendium
 #from collection import nieuwe_franciscus  # new page on otheo has paywall and no RSS https://www.otheo.be/auteur/paus-franciscus
-from collection import otheo_franciscus
+#from collection import otheo_franciscus
+from collection import popeleo
 from collection import prentencatechismus
 from collection import bots
 from collection import ewtn
@@ -62,7 +63,7 @@ from collection import middelbaar
 from collection import innerlijkleven
 #from collection import zingtjubilate  #abandoned implementation half way
 from collection import zingtjubilate2
-from collection import zuidinga
+#from collection import zuidinga
 #from collection import dominicanenradio  #seems to  have gone
 from collection import dominicanenpreek
 from collection import abc_thomas
