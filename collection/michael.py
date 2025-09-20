@@ -43,7 +43,7 @@ class Michael(Card):
 
     def harvestSync(self):
         # load from feed
-        feed = "http://www.heilige-michael.nl/feed"
+        feed = "http://www.heilige-michael.nl/?feed=rss2"
         harvest = getRSS(feed, headers=True)
         data = {
             'name': "H. Aartsengel Michael",
