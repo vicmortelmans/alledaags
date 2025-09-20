@@ -234,6 +234,9 @@ class Source(object):
         except AttributeError:
             logging.exception("AttributeError in harvestSync()")
             pass
+        except:
+            logging.exception("Some error occurred in harvestSync()")
+            pass
         else:
             stored = model.Cache()
             stored.key = self._key
