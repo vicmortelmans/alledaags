@@ -59,7 +59,7 @@ class RadioMariaVlaanderenRadio(Radio):
             'image-width': '304',
             'image-height': '104',
             'url': "https://www.radiomaria.be/",
-            'mp3': "http://stream.radiomaria.be:8000/RadioMaria-32",
+            'mp3': "https://stream.radiomaria.be:8443/RadioMaria-96",
             'key': self._key
         }
         self._data.update(data)
