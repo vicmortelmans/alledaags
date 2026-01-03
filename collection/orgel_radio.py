@@ -42,7 +42,7 @@ class OrgelRadio(Radio):
             'image-width': '260',
             'image-height': '141',
             'url': "https://organroxx.com/",
-            'mp3': "https://radio.organroxx.com/freestream.mp3",
+            'mp3': "http://radio.organroxx.com:8000/organmusic.mp3",
             'key': self._key
         }
         self._data.update(data)

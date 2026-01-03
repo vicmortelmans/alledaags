@@ -57,7 +57,7 @@ class GregoriaansRadio(Radio):
             'image-width': '304',
             'image-height': '214',
             'url': "https://www.concertzender.nl/",
-            'mp3': "http://streams.greenhost.nl:8080/gregoriaans",
+            'mp3': "https://streams.greenhost.nl:8006/gregoriaans",
             'key': self._key
         }
         self._data.update(data)
